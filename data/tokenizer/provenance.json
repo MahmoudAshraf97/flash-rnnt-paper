@@ -1,0 +1,42 @@
+{
+  "model": "tokenizer.model",
+  "sha256": "86aac6996f28a9dbd548ee112464d3e2b947c4942999ab61c377a565a4eacb02",
+  "sentencepiece_version": "0.2.1",
+  "vocab_size": 1023,
+  "normalization": "nmt_nfkc",
+  "training": {
+    "sources": [
+      {
+        "dataset": "nvidia/Granary",
+        "revision": "0fe23a860e3570b111e79a05ebeefc53822161e2",
+        "language": "en",
+        "records": 16384,
+        "selection": "Source-proportional sample, disjoint from a separate Granary evaluation sample"
+      },
+      {
+        "dataset": "Rev linked TED-LIUM 3 train",
+        "revision": "c05ab6fd8b4b627d123c922a22a39e993dd37635",
+        "records": 4096,
+        "selection": "Random sample without replacement, seed 20261001"
+      }
+    ],
+    "records": "training_records.json",
+    "text_preparation": "Preserve case and punctuation; remove literal <unk> annotations from TED-LIUM and collapse its whitespace; split training lines at whitespace to at most 4000 UTF-8 bytes",
+    "text_sha256": "1bb2973c4a33d989d6de1b6ad8ea2e5cfddbb15fa895bd807d47ec81fa5e22ff",
+    "lines": 20562,
+    "sentencepiece_arguments": {
+      "vocab_size": 1023,
+      "model_type": "bpe",
+      "character_coverage": 1.0,
+      "max_sentencepiece_length": 512,
+      "bos_id": -1,
+      "eos_id": -1,
+      "hard_vocab_limit": false,
+      "shuffle_input_sentence": true,
+      "remove_extra_whitespaces": false
+    },
+    "origin": "Arguments of NeMo's scripts/tokenizers/process_asr_text_tokenizer.py with --tokenizer spe --spe_type bpe --vocab_size 1023 --no_lower_case --spe_character_coverage 1.0 --spe_max_sentencepiece_length 512",
+    "rebuild": "make build-tokenizer"
+  },
+  "license": "Not covered by the repository's Apache-2.0 license; redistribution terms depend on the training text."
+}

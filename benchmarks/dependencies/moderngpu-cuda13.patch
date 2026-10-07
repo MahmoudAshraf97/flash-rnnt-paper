@@ -1,0 +1,30 @@
+--- a/src/moderngpu/context.hxx
++++ b/src/moderngpu/context.hxx
+@@ -23,7 +23,13 @@
+   cudaError_t result = cudaMemGetInfo(&freeMem, &totalMem);
+   if(cudaSuccess != result) throw cuda_exception_t(result);  
+ 
+-  double memBandwidth = (prop.memoryClockRate * 1000.0) *
++  // CUDA 13 removed these cudaDeviceProp fields; query equivalent attributes.
++  int memoryClockRate, clockRate;
++  result = cudaDeviceGetAttribute(&memoryClockRate, cudaDevAttrMemoryClockRate, ordinal);
++  if(cudaSuccess != result) throw cuda_exception_t(result);
++  result = cudaDeviceGetAttribute(&clockRate, cudaDevAttrClockRate, ordinal);
++  if(cudaSuccess != result) throw cuda_exception_t(result);
++  double memBandwidth = (memoryClockRate * 1000.0) *
+     (prop.memoryBusWidth / 8 * 2) / 1.0e9;
+ 
+   std::string s = detail::stringprintf(
+@@ -32,10 +38,10 @@
+     "FreeMem: %6dMB   TotalMem: %6dMB   %2d-bit pointers.\n"
+     "Mem Clock: %8.3lf Mhz x %d bits   (%5.1lf GB/s)\n"
+     "ECC %s\n\n",
+-    prop.name, prop.clockRate / 1000.0, ordinal,
++    prop.name, clockRate / 1000.0, ordinal,
+     prop.multiProcessorCount, prop.major, prop.minor,
+     (int)(freeMem / (1<< 20)), (int)(totalMem / (1<< 20)), 8 * sizeof(int*),
+-    prop.memoryClockRate / 1000.0, prop.memoryBusWidth, memBandwidth,
++    memoryClockRate / 1000.0, prop.memoryBusWidth, memBandwidth,
+     prop.ECCEnabled ? "Enabled" : "Disabled");
+   return s;
+ }

@@ -1,0 +1,14 @@
+{
+  "float32": {
+    "relative_l2": 0.002,
+    "outlier_rms": 0.05,
+    "absolute_floor": 2e-07,
+    "loss_per_transition": 1e-05
+  },
+  "float16": {
+    "relative_l2": 0.02,
+    "outlier_rms": 0.75,
+    "absolute_floor": 2e-06,
+    "loss_per_transition": 0.0005
+  }
+}

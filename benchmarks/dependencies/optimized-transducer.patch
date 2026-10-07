@@ -1,0 +1,115 @@
+--- a/optimized_transducer/csrc/kernels.cu
++++ b/optimized_transducer/csrc/kernels.cu
+@@ -46,7 +46,7 @@
+ 
+   int32_t u = idx1 % U_p1;
+ 
+-  const float *p_logits = logits + idx01 * vocab_size;
++  const float *p_logits = logits + static_cast<int64_t>(idx01) * vocab_size;
+   const float *p_denominator = denominator + idx01;
+   const int32_t *p_targets = targets + b * targets_col;
+ 
+@@ -76,7 +76,7 @@
+ 
+   int32_t u = idx1 % U_p1;
+ 
+-  const float *p_logits = logits + idx01 * vocab_size;
++  const float *p_logits = logits + static_cast<int64_t>(idx01) * vocab_size;
+   const int32_t *p_targets = targets + b * targets_col;
+ 
+   float *p_log_probs = log_probs + idx01 * 2;
+@@ -539,7 +539,7 @@
+   int32_t t = idx1 / U_p1;
+   int32_t u = idx1 % U_p1;
+ 
+-  const float *p_logits_t_u = logits + idx01 * vocab_size;
++  const float *p_logits_t_u = logits + static_cast<int64_t>(idx01) * vocab_size;
+   const float *p_denominator = denominator + offset;
+   const float *p_denominator_t = p_denominator + t * U_p1;
+   const int32_t *p_targets = targets + b * targets_col;
+@@ -551,7 +551,7 @@
+   const float *p_beta_t = p_beta + t * U_p1;
+   const float *p_beta_t_p1 = p_beta + (t + 1) * U_p1;
+ 
+-  float *p_grad_t_u = gradient + idx01 * vocab_size;
++  float *p_grad_t_u = gradient + static_cast<int64_t>(idx01) * vocab_size;
+ 
+   float loss = -1 * p_beta[0];
+ 
+@@ -606,7 +606,7 @@
+   int32_t t = idx1 / U_p1;
+   int32_t u = idx1 % U_p1;
+ 
+-  const float *p_logits_t_u = logits + idx01 * vocab_size;
++  const float *p_logits_t_u = logits + static_cast<int64_t>(idx01) * vocab_size;
+   const float *p_denominator = denominator + offset;
+   const float *p_denominator_t = p_denominator + t * U_p1;
+   const int32_t *p_targets = targets + b * targets_col;
+@@ -618,7 +618,7 @@
+   const float *p_beta_t = p_beta + t * U_p1;
+   const float *p_beta_t_p1 = p_beta + (t + 1) * U_p1;
+ 
+-  float *p_grad_t_u = gradient + idx01 * vocab_size;
++  float *p_grad_t_u = gradient + static_cast<int64_t>(idx01) * vocab_size;
+   float loss = -1 * p_beta[0];
+   int32_t diff = T - 1 - (U_p1 - 1);
+ 
+@@ -670,7 +670,7 @@
+   int32_t t = idx1 / U_p1;
+   int32_t u = idx1 % U_p1;
+ 
+-  const float *p_logits_t_u = logits + idx01 * vocab_size;
++  const float *p_logits_t_u = logits + static_cast<int64_t>(idx01) * vocab_size;
+   const int32_t *p_targets = targets + b * targets_col;
+ 
+   const float *p_alpha = alpha + offset;
+@@ -680,7 +680,7 @@
+   const float *p_beta_t = p_beta + t * U_p1;
+   const float *p_beta_t_p1 = p_beta + (t + 1) * U_p1;
+ 
+-  float *p_grad_t_u = gradient + idx01 * vocab_size;
++  float *p_grad_t_u = gradient + static_cast<int64_t>(idx01) * vocab_size;
+ 
+   float loss = -1 * p_beta[0];
+ 
+@@ -737,7 +737,7 @@
+ 
+   int32_t diff = T - 1 - (U_p1 - 1);
+ 
+-  const float *p_logits_t_u = logits + idx01 * vocab_size;
++  const float *p_logits_t_u = logits + static_cast<int64_t>(idx01) * vocab_size;
+   const int32_t *p_targets = targets + b * targets_col;
+ 
+   const float *p_alpha = alpha + offset;
+@@ -746,7 +746,7 @@
+   const float *p_beta = beta + offset;
+   const float *p_beta_t_p1 = p_beta + (t + 1) * U_p1;
+ 
+-  float *p_grad_t_u = gradient + idx01 * vocab_size;
++  float *p_grad_t_u = gradient + static_cast<int64_t>(idx01) * vocab_size;
+ 
+   float loss = -1 * p_beta[0];
+ 
+--- a/optimized_transducer/python/csrc/optimized_transducer.cc
++++ b/optimized_transducer/python/csrc/optimized_transducer.cc
+@@ -9,7 +9,7 @@
+ 
+ namespace ot {
+ 
+-PYBIND11_MODULE(_optimized_transducer, m) {
++PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
+   m.doc() = "Python wrapper for Optimized Transducer";
+ 
+   m.def("compute_transducer_loss", &ComputeTransducerLoss, py::arg("logits"),
+--- a/optimized_transducer/csrc/transducer-loss.cc
++++ b/optimized_transducer/csrc/transducer-loss.cc
+@@ -50,7 +50,8 @@
+ 
+   torch::checkSize(checked_from, logits_arg, 0, sum_all_TU);
+ 
+-  int32_t targets_max = targets.max().item<int32_t>();
++  // Empty targets have no label IDs to validate; retain all shape checks.
++  int32_t targets_max = targets.numel() ? targets.max().item<int32_t>() : -1;
+   TORCH_CHECK(targets_max < logits.size(1),
+               "targets.max() vs logits.size(1) is ", targets_max, " vs ",
+               logits.size(1), ". Expect targets.max() < logits.size(1)");

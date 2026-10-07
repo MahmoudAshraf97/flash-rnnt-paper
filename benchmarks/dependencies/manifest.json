@@ -1,0 +1,46 @@
+{
+  "apex": {
+    "url": "https://github.com/NVIDIA/apex.git",
+    "commit": "8a6508aaad6e75a2b939e33f308cd63d745d97f1",
+    "patch": null,
+    "patched_sha256": {},
+    "cflags": [
+      "-O3"
+    ],
+    "cuda_flags": [
+      "-O3"
+    ]
+  },
+  "optimized": {
+    "url": "https://github.com/csukuangfj/optimized_transducer.git",
+    "commit": "863667a0024f16bf7ff0016aa8e00c565c650843",
+    "patch": "optimized-transducer.patch",
+    "patched_sha256": {
+      "optimized_transducer/csrc/kernels.cu": "64bbc40a0410ab8be4d87324f9b6ad0ba8c36d0cb0ddbd8c89224b35b4212d51",
+      "optimized_transducer/python/csrc/optimized_transducer.cc": "aa2736cd10aa680f1062318659b524665375048f10d146640806ae7b0cf1b4ea",
+      "optimized_transducer/csrc/transducer-loss.cc": "bd527399b93b44bd4591a25013d19d9f6cd7e0cfb9e488a7062d6084d8f1a9f9"
+    },
+    "cflags": [
+      "-O3",
+      "-std=c++20",
+      "-DOT_WITH_CUDA"
+    ],
+    "cuda_flags": [
+      "-O3",
+      "-std=c++20",
+      "-DOT_WITH_CUDA",
+      "--expt-extended-lambda",
+      "--use_fast_math",
+      "-lineinfo",
+      "-Xptxas=-w"
+    ]
+  },
+  "moderngpu": {
+    "url": "https://github.com/moderngpu/moderngpu.git",
+    "commit": "2b3985541c8e88a133769598c406c33ddde9d0a5",
+    "patch": "moderngpu-cuda13.patch",
+    "patched_sha256": {
+      "src/moderngpu/context.hxx": "30a2407421ccc92e51c19d9d1a63e271e00a016c525323c878bcd225edb46117"
+    }
+  }
+}
