@@ -1,0 +1,676 @@
+{
+  "phase": "check",
+  "family": "apex",
+  "workload": null,
+  "config_id": null,
+  "rep": 0,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090"
+  },
+  "cpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "manifest_sha256": "ceec3eb8eed5de514a4b010c4999f6dcf8353c73760a70e8769b6364337708c1",
+  "extension_manifest_sha256": "2a36a0ea939ddd4234158312371c3d61bd0856f643aec0115db889b9ed39819f",
+  "check": {
+    "status": "pass",
+    "cases": [
+      {
+        "dtype": "torch.float32",
+        "fixture": {
+          "times": [
+            9,
+            6,
+            3
+          ],
+          "lengths": [
+            3,
+            1,
+            0
+          ]
+        },
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 3.953239300358291e-07,
+            "max_error_per_transition": 5.390780864124942e-08,
+            "limit": 1e-05
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 17280,
+            "reference_norm": 0.5695736302609998,
+            "reference_rms": 0.004332893409084117,
+            "relative_l2": 5.075418570830055e-06,
+            "max_abs": 1.5832483768463135e-07,
+            "outlier_bound": 0.00021684467045420588,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 7680,
+            "reference_norm": 0.8822257856804803,
+            "reference_rms": 0.010066978408956618,
+            "relative_l2": 4.899240020741489e-06,
+            "max_abs": 4.544854164123535e-07,
+            "outlier_bound": 0.000503548920447831,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 55.205088489910864,
+            "reference_rms": 0.06819289767939986,
+            "relative_l2": 2.8814690283681766e-06,
+            "max_abs": 2.193450927734375e-05,
+            "outlier_bound": 0.003409844883969993,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 6.034999750809598,
+            "reference_rms": 0.18859374221279993,
+            "relative_l2": 2.2231042228994603e-06,
+            "max_abs": 1.239776611328125e-05,
+            "outlier_bound": 0.009429887110639997,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        },
+        "padding": true,
+        "status": "pass"
+      },
+      {
+        "dtype": "torch.float32",
+        "fixture": {
+          "times": [
+            9,
+            6,
+            3
+          ],
+          "lengths": [
+            0,
+            0,
+            0
+          ]
+        },
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 1.5602492737798457e-06,
+            "max_error_per_transition": 2.600415456299743e-07,
+            "limit": 1e-05
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 17280,
+            "reference_norm": 0.5927597870119589,
+            "reference_rms": 0.004509276479561217,
+            "relative_l2": 3.2908049043189256e-06,
+            "max_abs": 1.0244548320770264e-07,
+            "outlier_bound": 0.00022566382397806086,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 1920,
+            "reference_norm": 1.331709101233902,
+            "reference_rms": 0.03039196311586413,
+            "relative_l2": 2.7994489549217817e-06,
+            "max_abs": 3.8743019104003906e-07,
+            "outlier_bound": 0.0015197981557932064,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 60.46754316965364,
+            "reference_rms": 0.07469342223854018,
+            "relative_l2": 2.341386282307315e-06,
+            "max_abs": 2.0503997802734375e-05,
+            "outlier_bound": 0.0037348711119270096,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 5.998954241241038,
+            "reference_rms": 0.18746732003878244,
+            "relative_l2": 2.0676004688198986e-06,
+            "max_abs": 1.239776611328125e-05,
+            "outlier_bound": 0.009373566001939122,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        },
+        "padding": true,
+        "status": "pass"
+      },
+      {
+        "dtype": "torch.float16",
+        "fixture": {
+          "times": [
+            9,
+            6,
+            3
+          ],
+          "lengths": [
+            3,
+            1,
+            0
+          ]
+        },
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 5.890801762831188e-05,
+            "max_error_per_transition": 8.032911494769802e-06,
+            "limit": 0.0005
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 17280,
+            "reference_norm": 0.5695664532492235,
+            "reference_rms": 0.0043328388117057125,
+            "relative_l2": 0.0003153100748408459,
+            "max_abs": 1.52587890625e-05,
+            "outlier_bound": 0.0032516291087792844,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 7680,
+            "reference_norm": 0.8822239463397229,
+            "reference_rms": 0.01006695742044778,
+            "relative_l2": 0.0004080695947688698,
+            "max_abs": 3.0517578125e-05,
+            "outlier_bound": 0.007552218065335835,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 55.205005070716595,
+            "reference_rms": 0.06819279463461296,
+            "relative_l2": 0.00040791977684993396,
+            "max_abs": 0.00390625,
+            "outlier_bound": 0.05114659597595972,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 6.035753239965631,
+            "reference_rms": 0.18861728874892597,
+            "relative_l2": 4.29783021216335e-05,
+            "max_abs": 0.000244140625,
+            "outlier_bound": 0.1414649665616945,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        },
+        "padding": true,
+        "status": "pass"
+      },
+      {
+        "dtype": "torch.float16",
+        "fixture": {
+          "times": [
+            9,
+            6,
+            3
+          ],
+          "lengths": [
+            0,
+            0,
+            0
+          ]
+        },
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 0.0007920827289922272,
+            "max_error_per_transition": 0.0001320137881653712,
+            "limit": 0.0005
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 17280,
+            "reference_norm": 0.5927414840260574,
+            "reference_rms": 0.004509137244029996,
+            "relative_l2": 0.0003520037468422286,
+            "max_abs": 7.62939453125e-06,
+            "outlier_bound": 0.0033838529330224966,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 1920,
+            "reference_norm": 1.331651279958724,
+            "reference_rms": 0.030390643531834176,
+            "relative_l2": 0.0002742702672926119,
+            "max_abs": 6.103515625e-05,
+            "outlier_bound": 0.02279498264887563,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 60.46694343942071,
+            "reference_rms": 0.0746926814129473,
+            "relative_l2": 0.0003259802524724121,
+            "max_abs": 0.00390625,
+            "outlier_bound": 0.056021511059710476,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 6.003084931985378,
+            "reference_rms": 0.18759640412454306,
+            "relative_l2": 0.0006508073928509971,
+            "max_abs": 0.00390625,
+            "outlier_bound": 0.1406993030934073,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        },
+        "padding": true,
+        "status": "pass"
+      }
+    ],
+    "sub_batch_checks": [
+      {
+        "schedule": "retain",
+        "sub_batch": 64,
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 0.0,
+            "max_error_per_transition": 0.0,
+            "limit": 1e-05
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 245760,
+            "reference_norm": 0.05504091647468471,
+            "reference_rms": 0.00011102737128460607,
+            "relative_l2": 1.3030374503266013e-06,
+            "max_abs": 2.0954757928848267e-09,
+            "outlier_bound": 5.751368564230304e-06,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 245760,
+            "reference_norm": 0.06223854681687714,
+            "reference_rms": 0.00012554627880932958,
+            "relative_l2": 1.3388533545508198e-06,
+            "max_abs": 2.3865140974521637e-09,
+            "outlier_bound": 6.477313940466479e-06,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 16.699488571187846,
+            "reference_rms": 0.020628288923790834,
+            "relative_l2": 1.9631356055526253e-07,
+            "max_abs": 4.172325134277344e-07,
+            "outlier_bound": 0.0010316144461895416,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 2.0088874133032935,
+            "reference_rms": 0.06277773166572792,
+            "relative_l2": 1.3404752235124383e-07,
+            "max_abs": 2.384185791015625e-07,
+            "outlier_bound": 0.0031390865832863963,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        }
+      },
+      {
+        "schedule": "release",
+        "sub_batch": 64,
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 0.0,
+            "max_error_per_transition": 0.0,
+            "limit": 1e-05
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 245760,
+            "reference_norm": 0.05504091647468471,
+            "reference_rms": 0.00011102737128460607,
+            "relative_l2": 1.3030374503266013e-06,
+            "max_abs": 2.0954757928848267e-09,
+            "outlier_bound": 5.751368564230304e-06,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 245760,
+            "reference_norm": 0.06223854681687714,
+            "reference_rms": 0.00012554627880932958,
+            "relative_l2": 1.3388533545508198e-06,
+            "max_abs": 2.3865140974521637e-09,
+            "outlier_bound": 6.477313940466479e-06,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 16.699488571187846,
+            "reference_rms": 0.020628288923790834,
+            "relative_l2": 1.9631356055526253e-07,
+            "max_abs": 4.172325134277344e-07,
+            "outlier_bound": 0.0010316144461895416,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 2.0088874133032935,
+            "reference_rms": 0.06277773166572792,
+            "relative_l2": 1.3404752235124383e-07,
+            "max_abs": 2.384185791015625e-07,
+            "outlier_bound": 0.0031390865832863963,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        }
+      },
+      {
+        "schedule": "release",
+        "sub_batch": 1,
+        "checks": {
+          "loss": {
+            "pass": true,
+            "max_abs": 0.0,
+            "max_error_per_transition": 0.0,
+            "limit": 1e-05
+          },
+          "encoder_input": {
+            "pass": true,
+            "elements": 245760,
+            "reference_norm": 0.05504091647468471,
+            "reference_rms": 0.00011102737128460607,
+            "relative_l2": 8.554611036951107e-07,
+            "max_abs": 1.6880221664905548e-09,
+            "outlier_bound": 5.751368564230304e-06,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "predictor_input": {
+            "pass": true,
+            "elements": 245760,
+            "reference_norm": 0.06223854681687714,
+            "reference_rms": 0.00012554627880932958,
+            "relative_l2": 8.483950976435313e-07,
+            "max_abs": 2.153683453798294e-09,
+            "outlier_bound": 6.477313940466479e-06,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.weight": {
+            "pass": true,
+            "elements": 655360,
+            "reference_norm": 16.699488571187846,
+            "reference_rms": 0.020628288923790834,
+            "relative_l2": 2.008551048299806e-07,
+            "max_abs": 4.172325134277344e-07,
+            "outlier_bound": 0.0010316144461895416,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          },
+          "joint_net.1.bias": {
+            "pass": true,
+            "elements": 1024,
+            "reference_norm": 2.0088874133032935,
+            "reference_rms": 0.06277773166572792,
+            "relative_l2": 1.2535835851887116e-07,
+            "max_abs": 2.384185791015625e-07,
+            "outlier_bound": 0.0031390865832863963,
+            "outlier_count": 0,
+            "norm_pass": true,
+            "outlier_pass": true
+          }
+        }
+      }
+    ]
+  },
+  "status": "pass",
+  "interference": {
+    "status": "pass",
+    "initial": {
+      "memory_MiB": 508,
+      "utilization_percent": 0
+    },
+    "interval_seconds": 0.5,
+    "monitor_cpus": [
+      5,
+      6,
+      7
+    ],
+    "samples": [
+      {
+        "monotonic": 676454.775106836,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676455.327046694,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676455.883478694,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676456.454866581,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676457.004703364,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676457.557946768,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676458.110425692,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676458.661609748,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676459.209054212,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676459.760656989,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676460.355272515,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676460.917507753,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676461.478017887,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676462.027679871,
+        "processes": [
+          {
+            "memory_MiB": "674"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676462.827098974,
+        "processes": [
+          {
+            "memory_MiB": "714"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676463.848835903,
+        "processes": [
+          {
+            "memory_MiB": "720"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676464.491889625,
+        "processes": [
+          {
+            "memory_MiB": "720"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 676464.88747208,
+        "processes": [
+          {
+            "memory_MiB": "694"
+          }
+        ],
+        "foreign_processes": 0
+      }
+    ],
+    "errors": []
+  }
+}

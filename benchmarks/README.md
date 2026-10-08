@@ -28,10 +28,10 @@ flags are in [dependencies/](dependencies/README.md).
 ## Measurements
 
 The run writes `../results/raw/comparison/` and `../results/raw/ablation/`.
-A study already there is resumed if it was recorded on this machine with the
-same workloads and sources, and replaced otherwise; repeat the command to
-resume an interrupted run. Use `--output PATH` to write elsewhere and
-`--study comparison` or `--study ablation` to run just one study.
+A local run is resumed when its environment, settings, workloads and sources
+match, and replaced otherwise. Published results in a fresh clone are replaced;
+repeat the command to resume an interrupted run. Use `--output PATH` to write
+elsewhere and `--study comparison` or `--study ablation` to run just one study.
 
 The comparison has 198 cells. The ablation has 30: five variants (compiled,
 specialized joint, specialized normalization, both specialized, whole-graph

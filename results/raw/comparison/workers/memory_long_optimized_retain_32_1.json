@@ -1,0 +1,180 @@
+{
+  "phase": "memory",
+  "family": "optimized",
+  "workload": "long",
+  "config_id": "optimized_retain_32",
+  "rep": 1,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090"
+  },
+  "cpus": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "manifest_sha256": "ceec3eb8eed5de514a4b010c4999f6dcf8353c73760a70e8769b6364337708c1",
+  "extension_manifest_sha256": "2a36a0ea939ddd4234158312371c3d61bd0856f643aec0115db889b9ed39819f",
+  "config": {
+    "id": "optimized_retain_32",
+    "family": "optimized",
+    "backend": "optimized",
+    "schedule": "retain",
+    "sub_batch": 32,
+    "tile_rows": null,
+    "dropout_p": 0.1
+  },
+  "status": "oom",
+  "interference": {
+    "status": "pass",
+    "initial": {
+      "memory_MiB": 508,
+      "utilization_percent": 0
+    },
+    "interval_seconds": 0.5,
+    "monitor_cpus": [
+      13,
+      14,
+      15
+    ],
+    "samples": [
+      {
+        "monotonic": 678175.943123649,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678176.49472306,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678177.066847869,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678177.654296774,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678178.2060612,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678178.758145594,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678179.308586887,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678179.864334442,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678180.413626144,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678180.969027228,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678181.590615906,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678182.183495966,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678182.741520815,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678183.296213069,
+        "processes": [
+          {
+            "memory_MiB": "1724"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678183.550582121,
+        "processes": [
+          {
+            "memory_MiB": "26450"
+          }
+        ],
+        "foreign_processes": 0
+      }
+    ],
+    "errors": []
+  },
+  "error_type": "OutOfMemoryError"
+}

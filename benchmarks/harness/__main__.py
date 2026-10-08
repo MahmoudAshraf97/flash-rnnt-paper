@@ -1,7 +1,7 @@
 """Build the benchmark backends and run the comparison and ablation studies.
 
-Records go to results/raw/ by default. A study recorded there with the same
-machine, workloads and sources is resumed; any other is replaced.
+Records go to results/raw/ by default. A local run with matching environment,
+settings, workloads and sources is resumed; any other is replaced.
 """
 
 import argparse
@@ -43,7 +43,10 @@ def main():
         if path.exists():
             manifest = json.loads(path.read_text())
             if (
-                manifest["machine"] != machine
+                not (folder / "coordinator.lock").exists()
+                or manifest["machine"]
+                != {k: machine[k] for k in ("threads_per_worker", "build_jobs")}
+                or manifest["environment"] != environment
                 or manifest["study"] != study
                 or manifest["workload_sha256"] != sha(args.workloads)
                 or manifest["source_state"] != source_state()
@@ -52,7 +55,7 @@ def main():
                 shutil.rmtree(folder)
         if not path.exists():
             prepare(folder, args.workloads, study, machine, environment)
-        campaign(folder)
+        campaign(folder, machine, args.workloads)
 
 
 if __name__ == "__main__":

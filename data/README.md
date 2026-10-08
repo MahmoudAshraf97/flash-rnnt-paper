@@ -8,9 +8,7 @@ Row counts and padding are calculated from these pairs, not stored separately.
 ## Selection and regeneration
 
 The short and medium batches come from the English subset of Granary; the long
-batch comes from the linked long-form training split of TED-LIUM 3. The
-supplied batches were selected with an earlier, approximate 30×2 equal-mass
-bucketer.
+batch comes from the linked long-form training split of TED-LIUM 3.
 
 Workload generation uses NeMo's strict 2D bucket assignment and its
 `estimate_duration_bins_2d.py`, fetched at the benchmark's NeMo commit.
@@ -19,9 +17,6 @@ four-standard-deviation token-rate filtering and duplicate-bin handling.
 The estimated token-rate limits also apply during assignment. Utterances are
 shuffled within each bucket with seed 20261011 and grouped into complete B128
 batches. Out-of-bucket and incomplete-batch exclusions are reported separately.
-
-Regeneration therefore selects different batches from the supplied ones; the
-supplied lengths remain the inputs of the existing measurements.
 
 Using batch mean duration, the bands are short `(0, 10]` seconds, medium
 `(10, 40.16]`, and long `>40.16`. Within each band, selection minimizes the sum
@@ -69,7 +64,7 @@ Encoder lengths are `ceil(duration_s / 0.08)`. Valid positions are
 `sum(T * (U + 1))`; padded positions are `128 * max(T) * (max(U) + 1)`.
 Selection uses source row order and the fixed random seed. Changing the source,
 revision or tokenizer can change the selected batches; it does not regenerate
-measurements for them. The original workload definitions are also recorded in
+measurements for them. The workload file is also recorded in
 the published comparison and ablation manifests under `results/raw/`.
 
 ## Tokenizer
@@ -84,7 +79,7 @@ linked TED-LIUM 3 training manifest. It checks the assembled training text
 against its recorded SHA-256, trains with the arguments NeMo's
 `process_asr_text_tokenizer.py` passes to SentencePiece (`--no_lower_case`,
 `--spe_max_sentencepiece_length 512`), and writes the model. The download is
-about 130 MB. `provenance.json` describes the sources and settings. The
+about 180 MB. `provenance.json` describes the sources and settings. The
 tokenizer is not covered by the repository's Apache-2.0 license.
 
 The benchmark reads only these lengths; no audio or transcripts are

@@ -52,7 +52,7 @@ Each step writes the files the next one reads, in place; any step can instead
 start from the supplied files.
 
 ```bash
-make build-tokenizer   # data/tokenizer/tokenizer.model from public transcripts (~130 MB download)
+make build-tokenizer   # data/tokenizer/tokenizer.model from public transcripts (~180 MB download)
 make workloads         # data/workloads/workloads.json from Granary and TED-LIUM metadata (hours, CPU)
 make benchmarks        # results/raw/ measurements (GPU)
 make results figures   # results/ tables and CSVs, draft/figures/
@@ -61,9 +61,9 @@ make paper check       # build/paper/main.pdf and layout checks
 
 `make benchmarks` needs an NVIDIA GPU, the CUDA 13.0 toolkit and a C++ compiler;
 see [benchmarks/README.md](benchmarks/README.md). It replaces the records in
-`results/raw/` unless they were recorded on this machine with the same
-workloads and sources, in which case it resumes them. The numbers quoted in
-`draft/*.md` come from `results/README.md`.
+`results/raw/` unless they belong to a local run with matching environment,
+settings, workloads and sources, in which case it resumes them. The numbers
+quoted in `draft/*.md` come from `results/README.md`.
 The implementation is pinned to NeMo commit
 `c0188115c167f027b14ad550c968e9ff83ba8f7f`.
 

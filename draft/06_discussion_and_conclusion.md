@@ -13,12 +13,12 @@ workload feasible even with compiled components. Recomputation has a
 measurable cost, but the specialized implementation remains competitive
 with external implementations despite that additional work.
 
-The preferred execution strategy depends on the training schedule. Sub-batch
-release avoids recomputation and, on medium, improves both throughput and
-memory over the selected tiled configuration. Tiling instead controls
-intermediate storage within an utterance and preserves a single loss
-backward call, making its memory savings available without moving gradient
-accumulation into the training loop.
+Using untiled Flash does not require retaining intermediates for the entire
+batch. Sub-batch release makes it feasible on the long workload and faster
+than tiled Flash, although it requires more memory and per-sub-batch backward
+calls. Tiling instead limits joint intermediate storage to one tile and
+preserves a single loss backward call, making memory reduction available without
+changing the training loop.
 
 Evaluation is limited to three corpus-derived batches on one GPU architecture
 and one model configuration. Measurements cover joint-and-loss computation,

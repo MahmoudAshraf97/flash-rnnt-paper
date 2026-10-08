@@ -102,12 +102,12 @@ class Guard:
             self.samples.append(
                 dict(
                     monotonic=time.monotonic(),
-                    processes=rows,
-                    foreign_pids=[r["pid"] for r in rows if r["pid"] != self.pid],
+                    processes=[dict(memory_MiB=r["memory_MiB"]) for r in rows],
+                    foreign_processes=sum(r["pid"] != self.pid for r in rows),
                 )
             )
         except Exception as exc:
-            self.errors.append(str(exc))
+            self.errors.append(f"Process telemetry failed: {type(exc).__name__}")
 
     def begin(self, require_idle=True):
         self.initial = idle_snapshot(self.uuid)
@@ -128,7 +128,7 @@ class Guard:
             try:
                 os.sched_setaffinity(0, self.monitor_cpus)
             except Exception as exc:
-                self.errors.append(f"Monitor affinity failed: {exc}")
+                self.errors.append(f"Monitor affinity failed: {type(exc).__name__}")
                 return
         while not self.stop.wait(self.interval):
             self.sample()
@@ -146,13 +146,12 @@ class Guard:
         return (
             bool(self.samples)
             and not self.errors
-            and not any(s["foreign_pids"] for s in self.samples)
+            and not any(s["foreign_processes"] for s in self.samples)
         )
 
     def record(self):
         return dict(
             status="pass" if self.clean() else "fail",
-            own_pid=self.pid,
             initial=getattr(self, "initial", None),
             interval_seconds=self.interval,
             monitor_cpus=self.monitor_cpus,
@@ -264,10 +263,9 @@ def prepare(folder, workload_path, study, machine, environment):
     manifest = dict(
         workloads,
         study=study,
-        workload_file=str(workload_path.resolve()),
         workload_sha256=sha(workload_path),
         configurations=study_configurations(study),
-        machine=machine,
+        machine={k: machine[k] for k in ("threads_per_worker", "build_jobs")},
         environment=environment,
         source_state=source_state(),
         timing=dict(warmup_seconds=3, measurement_seconds=10, min_samples=30),
@@ -277,9 +275,9 @@ def prepare(folder, workload_path, study, machine, environment):
     atomic_json(folder / "manifest.json", manifest)
 
 
-def verify(manifest):
+def verify(manifest, workload_path):
     require(
-        sha(manifest["workload_file"]) == manifest["workload_sha256"],
+        sha(workload_path) == manifest["workload_sha256"],
         "Workloads changed",
     )
     require(
@@ -298,7 +296,7 @@ def worker(args):
     from .runtime import setup
 
     manifest = json.loads((args.folder / "manifest.json").read_text())
-    setup(manifest["machine"])
+    machine = setup(manifest["machine"], cache=args.cache, cuda_home=args.cuda_home)
     import torch
     from numba.cuda import config as numba_config
 
@@ -306,10 +304,7 @@ def worker(args):
     cpus = [int(v) for v in args.cpus.split(",")]
     os.sched_setaffinity(0, cpus)
     configure_torch(len(cpus))
-    device = dict(
-        uuid=str(torch.cuda.get_device_properties(0).uuid),
-        name=torch.cuda.get_device_name(0),
-    )
+    uuid = str(torch.cuda.get_device_properties(0).uuid)
     environment = manifest["environment"]
     require(
         torch.__version__ == environment["torch"]
@@ -327,20 +322,19 @@ def worker(args):
         workload=args.workload,
         config_id=args.config_id,
         rep=args.rep,
-        gpu=device,
+        gpu=dict(name=torch.cuda.get_device_name(0)),
         cpus=cpus,
         manifest_sha256=sha(args.folder / "manifest.json"),
-        pid=os.getpid(),
     )
-    guard = Guard(device["uuid"], monitor_cpus=cpus[1:] or cpus)
-    with device_lock(device["uuid"]):
+    guard = Guard(uuid, monitor_cpus=cpus[1:] or cpus)
+    with device_lock(uuid):
         try:
             torch.cuda.synchronize()
             deadline = time.monotonic() + 60
             settled = 0
             while settled < 2:
-                state = idle_snapshot(device["uuid"])
-                pids = processes(device["uuid"])
+                state = idle_snapshot(uuid)
+                pids = processes(uuid)
                 clean = (
                     state["memory_MiB"] <= 1024
                     and state["utilization_percent"] == 0
@@ -356,7 +350,7 @@ def worker(args):
                 from .backends import load
 
                 api, opt, record["extension_manifest_sha256"] = load(
-                    manifest["machine"], environment, family=args.family
+                    machine, environment, family=args.family
                 )
             if args.phase == "check":
                 from .correctness import check
@@ -411,12 +405,12 @@ def worker(args):
                     )
                 )
                 record["status"] = "measured"
-        except torch.OutOfMemoryError:
+        except torch.OutOfMemoryError as exc:
             record.update(
                 status="oom" if args.phase != "check" else "runtime_error",
-                error=traceback.format_exc(),
+                error_type=type(exc).__name__,
             )
-        except Exception:
+        except Exception as exc:
             error = traceback.format_exc()
             status = (
                 "compile_error"
@@ -431,7 +425,7 @@ def worker(args):
                 )
                 else "runtime_error"
             )
-            record.update(status=status, error=error)
+            record.update(status=status, error_type=type(exc).__name__)
         finally:
             record["interference"] = guard.finish()
             if record["interference"]["status"] != "pass":
@@ -491,7 +485,7 @@ def aggregate_cell(records, workload, config, manifest, failed_checks):
             return dict(
                 cell, status="runtime_error", failure_kind="inconsistent_feasibility"
             )
-        if len({r["pid"] for r in oom}) >= manifest["memory"]["oom_confirmations"]:
+        if len({r["rep"] for r in oom}) >= manifest["memory"]["oom_confirmations"]:
             return dict(cell, status="oom", oom_process_records=len(oom))
         return cell
     if not good:
@@ -547,9 +541,9 @@ def next_jobs(manifest, job, row):
     return []
 
 
-def campaign(folder):
+def campaign(folder, machine, workload_path):
     manifest = json.loads((folder / "manifest.json").read_text())
-    verify(manifest)
+    verify(manifest, workload_path)
     lock = (folder / "coordinator.lock").open("a")
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     devices = []
@@ -582,7 +576,10 @@ def campaign(folder):
         pending.extend(next_jobs(manifest, job, row))
 
     def output_for(job):
-        stem = f"{job['phase']}_{job['family']}_{job['workload']}_{job['config_id']}_{job['rep']}"
+        if job["phase"] == "check":
+            stem = f"check_{job['family']}_{job['rep']}"
+        else:
+            stem = f"{job['phase']}_{job['workload']}_{job['config_id']}_{job['rep']}"
         return folder / "workers" / (stem + ".json")
 
     # Replay finished jobs before scheduling new ones, so an interrupted run resumes.
@@ -637,6 +634,10 @@ def campaign(folder):
                 ",".join(map(str, partitions[slot])),
                 "--output",
                 str(output.resolve()),
+                "--cache",
+                machine["artifact_root"],
+                "--cuda-home",
+                machine["cuda_home"],
             ]
             for key in ("workload", "config_id"):
                 if job[key] is not None:
@@ -655,7 +656,6 @@ def campaign(folder):
                         dict(
                             **job,
                             status="timeout",
-                            gpu=device,
                             manifest_sha256=sha(folder / "manifest.json"),
                         ),
                     )
@@ -688,16 +688,16 @@ def campaign(folder):
                     ),
                     flush=True,
                 )
-            except Exception:
+            except Exception as exc:
                 with condition:
-                    failures.append(traceback.format_exc())
+                    failures.append(type(exc).__name__)
                     active.discard(slot)
                     condition.notify_all()
                 return
 
     with ThreadPoolExecutor(max_workers=len(devices)) as pool:
         list(pool.map(execute, range(len(devices))))
-    verify(manifest)
+    verify(manifest, workload_path)
     if failures:
         atomic_json(
             folder / f"stopped_{time.time_ns()}.json",
@@ -734,6 +734,8 @@ def main():
     parser.add_argument("--rep", type=int, default=0)
     parser.add_argument("--cpus", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--cache", type=Path)
+    parser.add_argument("--cuda-home", type=Path)
     worker(parser.parse_args())
 
 

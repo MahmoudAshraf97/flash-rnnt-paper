@@ -1,0 +1,771 @@
+{
+  "status": "complete",
+  "cells": [
+    {
+      "workload": "short",
+      "config": {
+        "id": "untiled_compiled",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3001950720,
+      "incremental_allocated_bytes": 2912502272,
+      "reserved_bytes": 3063939072,
+      "median_ms": 9.673344495240599,
+      "samples_per_second": 13232.238349722531,
+      "within_process_quarter_span": 0.0017297508014273433,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "untiled_specialized_joint",
+        "joint": "specialized",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2772728320,
+      "incremental_allocated_bytes": 2683279872,
+      "reserved_bytes": 2998927360,
+      "median_ms": 9.424849064089358,
+      "samples_per_second": 13581.119350516361,
+      "within_process_quarter_span": 0.0015606700058772294,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "untiled_specialized_normalization",
+        "joint": "compiled",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1769106432,
+      "incremental_allocated_bytes": 1679657984,
+      "reserved_bytes": 1832910848,
+      "median_ms": 8.275858010165393,
+      "samples_per_second": 15466.67425211684,
+      "within_process_quarter_span": 0.001969730386156998,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "untiled_specialized",
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1541558272,
+      "incremental_allocated_bytes": 1452109824,
+      "reserved_bytes": 1621098496,
+      "median_ms": 8.028417942114174,
+      "samples_per_second": 15943.36529598918,
+      "within_process_quarter_span": 0.005314162098269293,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "tiled_compiled",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1606140416,
+      "incremental_allocated_bytes": 1516691968,
+      "reserved_bytes": 2218786816,
+      "median_ms": 12.528879451565444,
+      "samples_per_second": 10216.396485801195,
+      "within_process_quarter_span": 0.0020037665148322503,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "tiled_specialized_joint",
+        "joint": "specialized",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1453118464,
+      "incremental_allocated_bytes": 1363670016,
+      "reserved_bytes": 1822425088,
+      "median_ms": 12.060619075782597,
+      "samples_per_second": 10613.053873579393,
+      "within_process_quarter_span": 0.005006665353271433,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "tiled_specialized_normalization",
+        "joint": "compiled",
+        "normalization": "specialized",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 918336000,
+      "incremental_allocated_bytes": 828887552,
+      "reserved_bytes": 1205862400,
+      "median_ms": 11.14760898053646,
+      "samples_per_second": 11482.282902413051,
+      "within_process_quarter_span": 0.0027341612767923795,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "tiled_specialized",
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 764812800,
+      "incremental_allocated_bytes": 675364352,
+      "reserved_bytes": 1023410176,
+      "median_ms": 10.791317094117403,
+      "samples_per_second": 11861.388084849788,
+      "within_process_quarter_span": 0.004600739179124291,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "untiled_whole_graph",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": true,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2425269248,
+      "incremental_allocated_bytes": 2335820800,
+      "reserved_bytes": 2483027968,
+      "median_ms": 9.851298469584435,
+      "samples_per_second": 12993.211036615716,
+      "within_process_quarter_span": 0.0013980614005770775,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "tiled_whole_graph",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": true,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1317786624,
+      "incremental_allocated_bytes": 1228338176,
+      "reserved_bytes": 1927282688,
+      "median_ms": 12.48329400550574,
+      "samples_per_second": 10253.703865625994,
+      "within_process_quarter_span": 0.003572669694461128,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "untiled_compiled",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 23585746944,
+      "incremental_allocated_bytes": 23460042752,
+      "reserved_bytes": 23710400512,
+      "median_ms": 75.09974204003811,
+      "samples_per_second": 1704.3999955653517,
+      "within_process_quarter_span": 0.0005833889762201228,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "untiled_specialized_joint",
+        "joint": "specialized",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 21945673216,
+      "incremental_allocated_bytes": 21819969024,
+      "reserved_bytes": 22053650432,
+      "median_ms": 71.73769199289382,
+      "samples_per_second": 1784.278200819165,
+      "within_process_quarter_span": 0.0037274284932824475,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "untiled_specialized_normalization",
+        "joint": "compiled",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 12664929792,
+      "incremental_allocated_bytes": 12539225600,
+      "reserved_bytes": 12796821504,
+      "median_ms": 65.43861806858331,
+      "samples_per_second": 1956.0315266109208,
+      "within_process_quarter_span": 0.0051606958643257705,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "untiled_specialized",
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 11024856064,
+      "incremental_allocated_bytes": 10899151872,
+      "reserved_bytes": 11146362880,
+      "median_ms": 62.07683100365102,
+      "samples_per_second": 2061.9609269756656,
+      "within_process_quarter_span": 0.005712527121044975,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "tiled_compiled",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2323182080,
+      "incremental_allocated_bytes": 2197477888,
+      "reserved_bytes": 2661285888,
+      "median_ms": 98.04878797149286,
+      "samples_per_second": 1305.4725371742004,
+      "within_process_quarter_span": 0.0008952715790282451,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "tiled_specialized_joint",
+        "joint": "specialized",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2027966976,
+      "incremental_allocated_bytes": 1902262784,
+      "reserved_bytes": 2847932416,
+      "median_ms": 95.06488445913419,
+      "samples_per_second": 1346.4488041851428,
+      "within_process_quarter_span": 0.0026686386837768694,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "tiled_specialized_normalization",
+        "joint": "compiled",
+        "normalization": "specialized",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1389801984,
+      "incremental_allocated_bytes": 1264097792,
+      "reserved_bytes": 1577058304,
+      "median_ms": 89.78215151000768,
+      "samples_per_second": 1425.6731192917816,
+      "within_process_quarter_span": 0.006106401922999272,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "tiled_specialized",
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1094859776,
+      "incremental_allocated_bytes": 969155584,
+      "reserved_bytes": 1520435200,
+      "median_ms": 85.88884701021016,
+      "samples_per_second": 1490.2982687005197,
+      "within_process_quarter_span": 0.00566529489170442,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "untiled_whole_graph",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": true,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 18893953024,
+      "incremental_allocated_bytes": 18768248832,
+      "reserved_bytes": 18998099968,
+      "median_ms": 74.83428705018014,
+      "samples_per_second": 1710.4459071570975,
+      "within_process_quarter_span": 0.00308195796574684,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "tiled_whole_graph",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": true,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1932022272,
+      "incremental_allocated_bytes": 1806318080,
+      "reserved_bytes": 2659188736,
+      "median_ms": 97.34850993845612,
+      "samples_per_second": 1314.8634743451319,
+      "within_process_quarter_span": 0.0010985584002201065,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "untiled_compiled",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "untiled_specialized_joint",
+        "joint": "specialized",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "untiled_specialized_normalization",
+        "joint": "compiled",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "untiled_specialized",
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "tiled_compiled",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3745875456,
+      "incremental_allocated_bytes": 3455469056,
+      "reserved_bytes": 4620025856,
+      "median_ms": 1990.002355480101,
+      "samples_per_second": 64.32153190548318,
+      "within_process_quarter_span": 0.00837809727434946,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "tiled_specialized_joint",
+        "joint": "specialized",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2823921152,
+      "incremental_allocated_bytes": 2533514752,
+      "reserved_bytes": 3477078016,
+      "median_ms": 1867.7935024606995,
+      "samples_per_second": 68.53005957637615,
+      "within_process_quarter_span": 0.004483130863480511,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "tiled_specialized_normalization",
+        "joint": "compiled",
+        "normalization": "specialized",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2773537792,
+      "incremental_allocated_bytes": 2483131392,
+      "reserved_bytes": 3204448256,
+      "median_ms": 1752.2989909630269,
+      "samples_per_second": 73.0468947708826,
+      "within_process_quarter_span": 0.0072312568803680755,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "tiled_specialized",
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": true,
+        "whole_graph": false,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1852075008,
+      "incremental_allocated_bytes": 1561668608,
+      "reserved_bytes": 2506096640,
+      "median_ms": 1696.212054521311,
+      "samples_per_second": 75.46226290445917,
+      "within_process_quarter_span": 0.012195704873900315,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "untiled_whole_graph",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": false,
+        "whole_graph": true,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "tiled_whole_graph",
+        "joint": "compiled",
+        "normalization": "compiled",
+        "tiled": true,
+        "whole_graph": true,
+        "family": "ablation",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3338283520,
+      "incremental_allocated_bytes": 3047877120,
+      "reserved_bytes": 4211081216,
+      "median_ms": 1941.671525419224,
+      "samples_per_second": 65.92258181896327,
+      "within_process_quarter_span": 0.0023589095011340433,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    }
+  ],
+  "manifest_sha256": "1647668608177ccdd39dbab052a3d9706a228aaf87a716ecda657da3454e9c66"
+}

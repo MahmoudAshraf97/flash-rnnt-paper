@@ -23,9 +23,9 @@ including blank, 80 ms encoder steps, and joint dropout of 0.1 on NVIDIA RTX
 
 | Workload | Mean duration (s) | Encoder length $T$ | Transcript length $U$ | Valid alignment positions |
 |---|---:|---:|---:|---:|
-| Short | 5.00 | 48–70 | 30–52 | 294,657 |
-| Medium | 18.87 | 229–246 | 34–96 | 2,312,520 |
-| Long | 65.03 | 763–850 | 304–407 | 35,277,603 |
+| Short | 4.92 | 47–69 | 29–50 | 282,687 |
+| Medium | 18.72 | 227–244 | 40–96 | 2,300,131 |
+| Long | 69.62 | 851–885 | 325–458 | 41,122,726 |
 
 *Representative workload batches.*
 

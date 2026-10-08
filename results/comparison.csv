@@ -1,0 +1,199 @@
+workload,implementation,schedule,sub_batch_size,tile_rows,samples_per_second,peak_memory_gib,status
+short,Flash (tiled),full batch,,25000,7314.527321057254,0.30700159072875977,ok
+short,Flash (tiled),full batch,,50000,12072.129632857208,0.3799872398376465,ok
+short,Flash (tiled),full batch,,100000,11755.119174917605,0.5264763832092285,ok
+short,Flash (tiled),full batch,,200000,12070.411280791574,0.712287425994873,ok
+short,Flash (tiled),full batch,,400000,11961.884646701015,1.3013348579406738,ok
+short,Flash (tiled),full batch,,800000,12120.115988294396,1.3013348579406738,ok
+short,Flash (untiled),full batch,,,15651.570595025567,1.4356880187988281,ok
+short,Flash (untiled),retain,1,,845.4427256503486,1.0423288345336914,ok
+short,Flash (untiled),retain,2,,1662.7412102461392,1.0640888214111328,ok
+short,Flash (untiled),retain,4,,3283.7663314270876,1.1024055480957031,ok
+short,Flash (untiled),retain,8,,4985.989371905803,1.1686148643493652,ok
+short,Flash (untiled),retain,16,,8727.207082178664,1.1806340217590332,ok
+short,Flash (untiled),retain,32,,13513.995675087772,1.2195777893066406,ok
+short,Flash (untiled),retain,64,,15225.36399141318,1.302391529083252,ok
+short,Flash (untiled),release,1,,549.4618614077294,0.16709041595458984,ok
+short,Flash (untiled),release,2,,1067.7570426477648,0.20230484008789062,ok
+short,Flash (untiled),release,4,,2152.85984360601,0.25279712677001953,ok
+short,Flash (untiled),release,8,,3099.8193431310665,0.332211971282959,ok
+short,Flash (untiled),release,16,,8627.960237161167,0.4153861999511719,ok
+short,Flash (untiled),release,32,,13410.51922659042,0.5668377876281738,ok
+short,Flash (untiled),release,64,,15287.55401146945,0.8707704544067383,ok
+short,Apex,full batch,,,12359.865148563784,3.289341449737549,ok
+short,Apex,retain,1,,1542.1390484457233,1.770585060119629,ok
+short,Apex,retain,2,,2717.354498474534,1.7744264602661133,ok
+short,Apex,retain,4,,4916.457472500134,1.792041301727295,ok
+short,Apex,retain,8,,9846.578829389833,1.8387856483459473,ok
+short,Apex,retain,16,,11758.774608288293,1.9275517463684082,ok
+short,Apex,retain,32,,11710.708613246397,2.121729850769043,ok
+short,Apex,retain,64,,12051.923805682602,2.5354256629943848,ok
+short,Apex,release,1,,1150.9370922568457,0.17043209075927734,ok
+short,Apex,release,2,,2170.378142536262,0.20639562606811523,ok
+short,Apex,release,4,,4372.535060235895,0.2601161003112793,ok
+short,Apex,release,8,,8638.692587781585,0.34448957443237305,ok
+short,Apex,release,16,,11565.76620924466,0.5566763877868652,ok
+short,Apex,release,32,,11854.692567363187,0.9532747268676758,ok
+short,Apex,release,64,,11949.704500365995,1.757504940032959,ok
+short,Numba,full batch,,,5418.683924686077,3.1510114669799805,ok
+short,Numba,retain,1,,498.0752542998696,1.5848889350891113,ok
+short,Numba,retain,2,,938.0056598918891,1.7848634719848633,ok
+short,Numba,retain,4,,1780.4081332639676,2.00128173828125,ok
+short,Numba,retain,8,,3157.4289388531715,2.1791043281555176,ok
+short,Numba,retain,16,,4275.284786660101,2.2921156883239746,ok
+short,Numba,retain,32,,5159.3799986584345,2.3757967948913574,ok
+short,Numba,retain,64,,5433.284045770173,2.639925956726074,ok
+short,Numba,release,1,,449.9546413384395,0.1752767562866211,ok
+short,Numba,release,2,,885.9147562023323,0.22327709197998047,ok
+short,Numba,release,4,,1716.6443978728455,0.32039499282836914,ok
+short,Numba,release,8,,3054.3288259250266,0.4214625358581543,ok
+short,Numba,release,16,,4329.98724335451,0.5922398567199707,ok
+short,Numba,release,32,,5160.7010056705885,0.9331455230712891,ok
+short,Numba,release,64,,5343.800837156964,1.654468059539795,ok
+short,Optimized Transducer,full batch,,,4485.053480856026,3.0900206565856934,ok
+short,Optimized Transducer,retain,1,,601.0161145313779,2.13362455368042,ok
+short,Optimized Transducer,retain,2,,950.3121991272199,2.134465217590332,ok
+short,Optimized Transducer,retain,4,,1591.605325901817,2.159759998321533,ok
+short,Optimized Transducer,retain,8,,2457.404610872374,2.2396974563598633,ok
+short,Optimized Transducer,retain,16,,3117.5411144487966,2.2909884452819824,ok
+short,Optimized Transducer,retain,32,,3558.806527885221,2.3956570625305176,ok
+short,Optimized Transducer,retain,64,,3858.493839806898,2.6183834075927734,ok
+short,Optimized Transducer,release,1,,667.2003434884593,0.18796634674072266,ok
+short,Optimized Transducer,release,2,,1229.1337554829713,0.2390890121459961,ok
+short,Optimized Transducer,release,4,,1576.1426863113982,0.31348371505737305,ok
+short,Optimized Transducer,release,8,,2147.9249752645956,0.4402122497558594,ok
+short,Optimized Transducer,release,16,,2604.33865506209,0.6282081604003906,ok
+short,Optimized Transducer,release,32,,2957.899753522394,0.975731372833252,ok
+short,Optimized Transducer,release,64,,3599.7957491140914,1.6758198738098145,ok
+medium,Flash (tiled),full batch,,25000,1136.3553535426372,0.398622989654541,ok
+medium,Flash (tiled),full batch,,50000,1388.2111873938313,0.4744901657104492,ok
+medium,Flash (tiled),full batch,,100000,1419.3151325788124,0.619774341583252,ok
+medium,Flash (tiled),full batch,,200000,1507.9670898324102,1.019667625427246,ok
+medium,Flash (tiled),full batch,,400000,1526.7312153087196,1.841550350189209,ok
+medium,Flash (tiled),full batch,,800000,1573.2362812194,3.487624168395996,ok
+medium,Flash (untiled),full batch,,,2043.8157049322183,10.26769733428955,ok
+medium,Flash (untiled),retain,1,,834.4675165276924,7.584785461425781,ok
+medium,Flash (untiled),retain,2,,1439.3866680206402,7.62973690032959,ok
+medium,Flash (untiled),retain,4,,1741.8299977880577,7.658282279968262,ok
+medium,Flash (untiled),retain,8,,1889.1669024709765,7.718451976776123,ok
+medium,Flash (untiled),retain,16,,2033.5070813615298,7.888885974884033,ok
+medium,Flash (untiled),retain,32,,2026.641820336348,8.360624313354492,ok
+medium,Flash (untiled),retain,64,,2072.291667992776,8.994119644165039,ok
+medium,Flash (untiled),release,1,,553.5644714139299,0.45394468307495117,ok
+medium,Flash (untiled),release,2,,997.7287675525165,0.5481777191162109,ok
+medium,Flash (untiled),release,4,,1730.6467371934823,0.7194643020629883,ok
+medium,Flash (untiled),release,8,,1928.1707299034415,1.0400547981262207,ok
+medium,Flash (untiled),release,16,,1992.5542302870278,1.7037553787231445,ok
+medium,Flash (untiled),release,32,,2035.384133399187,3.0234532356262207,ok
+medium,Flash (untiled),release,64,,2082.3575653719936,5.510186195373535,ok
+medium,Apex,full batch,,,1564.4238104863236,26.190898418426514,ok
+medium,Apex,retain,1,,1271.6773041668182,13.295658588409424,ok
+medium,Apex,retain,2,,1404.7033095694114,13.43685007095337,ok
+medium,Apex,retain,4,,1438.9137022550744,13.604787349700928,ok
+medium,Apex,retain,8,,1503.18279564715,14.020774841308594,ok
+medium,Apex,retain,16,,1528.7380194650646,14.827994346618652,ok
+medium,Apex,retain,32,,1553.5448238540944,16.48456382751465,ok
+medium,Apex,retain,64,,1541.980479143089,19.623321056365967,ok
+medium,Apex,release,1,,1131.4940237237631,0.4934864044189453,ok
+medium,Apex,release,2,,1388.464258057503,0.7423372268676758,ok
+medium,Apex,release,4,,1462.5762283988306,1.19122314453125,ok
+medium,Apex,release,8,,1490.3688399618782,2.043196678161621,ok
+medium,Apex,release,16,,1535.8923611974778,3.7364025115966797,ok
+medium,Apex,release,32,,1539.9054220623943,6.870406150817871,ok
+medium,Apex,release,64,,1558.2581224291653,13.441503047943115,ok
+medium,Numba,full batch,,,801.690675333306,20.740318775177002,ok
+medium,Numba,retain,1,,420.7625739482212,11.674218654632568,ok
+medium,Numba,retain,2,,599.7987694369459,12.859093189239502,ok
+medium,Numba,retain,4,,709.7010989210914,13.868553638458252,ok
+medium,Numba,retain,8,,745.9167598520771,14.682295799255371,ok
+medium,Numba,retain,16,,769.0720462487101,15.467981338500977,ok
+medium,Numba,retain,32,,782.4104066966775,16.32967758178711,ok
+medium,Numba,retain,64,,791.9006355572436,17.940003871917725,ok
+medium,Numba,release,1,,393.1252528070322,0.4963235855102539,ok
+medium,Numba,release,2,,595.5636888144439,0.6405644416809082,ok
+medium,Numba,release,4,,703.0213428897121,0.9275579452514648,ok
+medium,Numba,release,8,,748.518270500212,1.5149993896484375,ok
+medium,Numba,release,16,,760.0234527803352,2.8038763999938965,ok
+medium,Numba,release,32,,779.346385930038,5.382303714752197,ok
+medium,Numba,release,64,,792.4347271983887,10.537450313568115,ok
+medium,Optimized Transducer,full batch,,,633.2607364697598,24.548961639404297,ok
+medium,Optimized Transducer,retain,1,,416.23122675949065,16.078818798065186,ok
+medium,Optimized Transducer,retain,2,,540.0560274358096,16.168909072875977,ok
+medium,Optimized Transducer,retain,4,,626.5730133790513,16.25733995437622,ok
+medium,Optimized Transducer,retain,8,,650.8646096897908,16.472416400909424,ok
+medium,Optimized Transducer,retain,16,,658.7839103902303,16.99002981185913,ok
+medium,Optimized Transducer,retain,32,,662.6620136123031,18.094926834106445,ok
+medium,Optimized Transducer,retain,64,,662.1062513534721,20.192549228668213,ok
+medium,Optimized Transducer,release,1,,416.3241194825591,0.5863008499145508,ok
+medium,Optimized Transducer,release,2,,540.9849591795837,0.8029313087463379,ok
+medium,Optimized Transducer,release,4,,627.9199135939709,1.1956920623779297,ok
+medium,Optimized Transducer,release,8,,654.0979981589767,1.937671184539795,ok
+medium,Optimized Transducer,release,16,,653.5504786763652,3.5161948204040527,ok
+medium,Optimized Transducer,release,32,,662.3932229582219,6.452081203460693,ok
+medium,Optimized Transducer,release,64,,661.3998055914784,12.608978271484375,ok
+long,Flash (tiled),full batch,,25000,31.573531534115254,1.5116534233093262,ok
+long,Flash (tiled),full batch,,50000,51.83072774183292,1.5410256385803223,ok
+long,Flash (tiled),full batch,,100000,64.55353662004325,1.6002507209777832,ok
+long,Flash (tiled),full batch,,200000,77.06431861485191,1.724879264831543,ok
+long,Flash (tiled),full batch,,400000,82.59867626547434,2.581632614135742,ok
+long,Flash (tiled),full batch,,800000,84.08179523217768,4.261627674102783,ok
+long,Flash (untiled),full batch,,,,,OOM
+long,Flash (untiled),retain,1,,,,OOM
+long,Flash (untiled),retain,2,,,,OOM
+long,Flash (untiled),retain,4,,,,OOM
+long,Flash (untiled),retain,8,,,,OOM
+long,Flash (untiled),retain,16,,,,OOM
+long,Flash (untiled),retain,32,,,,OOM
+long,Flash (untiled),retain,64,,,,OOM
+long,Flash (untiled),release,1,,104.10236303784613,2.6017775535583496,ok
+long,Flash (untiled),release,2,,110.18451595286562,4.164097309112549,ok
+long,Flash (untiled),release,4,,115.78698313863329,7.23190450668335,ok
+long,Flash (untiled),release,8,,115.69758618776832,12.552225112915039,ok
+long,Flash (untiled),release,16,,118.84172575822447,23.729793071746826,ok
+long,Flash (untiled),release,32,,,,OOM
+long,Flash (untiled),release,64,,,,OOM
+long,Apex,full batch,,,,,OOM
+long,Apex,retain,1,,,,OOM
+long,Apex,retain,2,,,,OOM
+long,Apex,retain,4,,,,OOM
+long,Apex,retain,8,,,,OOM
+long,Apex,retain,16,,,,OOM
+long,Apex,retain,32,,,,OOM
+long,Apex,retain,64,,,,OOM
+long,Apex,release,1,,79.23088519877535,5.236268997192383,ok
+long,Apex,release,2,,81.44977056309156,8.945239067077637,ok
+long,Apex,release,4,,84.21124283297391,17.048869609832764,ok
+long,Apex,release,8,,,,OOM
+long,Apex,release,16,,,,OOM
+long,Apex,release,32,,,,OOM
+long,Apex,release,64,,,,OOM
+long,Numba,full batch,,,,,OOM
+long,Numba,retain,1,,,,OOM
+long,Numba,retain,2,,,,OOM
+long,Numba,retain,4,,,,OOM
+long,Numba,retain,8,,,,OOM
+long,Numba,retain,16,,,,OOM
+long,Numba,retain,32,,,,OOM
+long,Numba,retain,64,,,,OOM
+long,Numba,release,1,,45.131675101416114,3.4183897972106934,ok
+long,Numba,release,2,,47.43005351810529,6.17270565032959,ok
+long,Numba,release,4,,48.7047570025584,11.673034191131592,ok
+long,Numba,release,8,,48.26636165665366,22.66212511062622,ok
+long,Numba,release,16,,,,OOM
+long,Numba,release,32,,,,OOM
+long,Numba,release,64,,,,OOM
+long,Optimized Transducer,full batch,,,,,OOM
+long,Optimized Transducer,retain,1,,,,OOM
+long,Optimized Transducer,retain,2,,,,OOM
+long,Optimized Transducer,retain,4,,,,OOM
+long,Optimized Transducer,retain,8,,,,OOM
+long,Optimized Transducer,retain,16,,,,OOM
+long,Optimized Transducer,retain,32,,,,OOM
+long,Optimized Transducer,retain,64,,,,OOM
+long,Optimized Transducer,release,1,,35.58706236301905,4.950500011444092,ok
+long,Optimized Transducer,release,2,,36.49484696593977,8.428074359893799,ok
+long,Optimized Transducer,release,4,,37.39500479975456,16.02089834213257,ok
+long,Optimized Transducer,release,8,,,,OOM
+long,Optimized Transducer,release,16,,,,OOM
+long,Optimized Transducer,release,32,,,,OOM
+long,Optimized Transducer,release,64,,,,OOM

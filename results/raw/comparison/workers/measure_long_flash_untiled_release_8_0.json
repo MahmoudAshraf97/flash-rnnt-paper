@@ -1,0 +1,1050 @@
+{
+  "phase": "measure",
+  "family": "flash_untiled",
+  "workload": "long",
+  "config_id": "flash_untiled_release_8",
+  "rep": 0,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090"
+  },
+  "cpus": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "manifest_sha256": "ceec3eb8eed5de514a4b010c4999f6dcf8353c73760a70e8769b6364337708c1",
+  "config": {
+    "id": "flash_untiled_release_8",
+    "family": "flash_untiled",
+    "backend": "flash",
+    "schedule": "release",
+    "sub_batch": 8,
+    "tile_rows": null,
+    "dropout_p": 0.1,
+    "joint": "specialized",
+    "normalization": "specialized",
+    "tiled": false,
+    "whole_graph": false
+  },
+  "initial_invariants": {
+    "finite": true,
+    "fp32_parameters": true,
+    "fp32_parameter_gradients": true,
+    "fp16_states": true,
+    "fp16_state_gradients": true,
+    "loss_fp32": true,
+    "dropout": true
+  },
+  "startup_seconds": 16.200143549009226,
+  "timing": {
+    "samples": [
+      {
+        "wall_ms": 1094.608876039274,
+        "cuda_event_ms": 1094.566162109375
+      },
+      {
+        "wall_ms": 1095.0774339726195,
+        "cuda_event_ms": 1095.0418701171875
+      },
+      {
+        "wall_ms": 1096.8408059561625,
+        "cuda_event_ms": 1096.801513671875
+      },
+      {
+        "wall_ms": 1097.9070189641789,
+        "cuda_event_ms": 1097.8642578125
+      },
+      {
+        "wall_ms": 1099.660270032473,
+        "cuda_event_ms": 1099.607421875
+      },
+      {
+        "wall_ms": 1100.1931669889018,
+        "cuda_event_ms": 1100.1427001953125
+      },
+      {
+        "wall_ms": 1101.3781810179353,
+        "cuda_event_ms": 1101.3272705078125
+      },
+      {
+        "wall_ms": 1102.5212249951437,
+        "cuda_event_ms": 1102.4716796875
+      },
+      {
+        "wall_ms": 1102.5453159818426,
+        "cuda_event_ms": 1102.488525390625
+      },
+      {
+        "wall_ms": 1102.880995022133,
+        "cuda_event_ms": 1102.83349609375
+      },
+      {
+        "wall_ms": 1104.2283569695428,
+        "cuda_event_ms": 1104.1800537109375
+      },
+      {
+        "wall_ms": 1104.114888003096,
+        "cuda_event_ms": 1104.0648193359375
+      },
+      {
+        "wall_ms": 1104.6799959149212,
+        "cuda_event_ms": 1104.6312255859375
+      },
+      {
+        "wall_ms": 1105.542971054092,
+        "cuda_event_ms": 1105.491943359375
+      },
+      {
+        "wall_ms": 1106.2796569895,
+        "cuda_event_ms": 1106.229248046875
+      },
+      {
+        "wall_ms": 1106.385346967727,
+        "cuda_event_ms": 1106.3358154296875
+      },
+      {
+        "wall_ms": 1106.7743750754744,
+        "cuda_event_ms": 1106.7255859375
+      },
+      {
+        "wall_ms": 1106.6230260767043,
+        "cuda_event_ms": 1106.5726318359375
+      },
+      {
+        "wall_ms": 1107.5709520373493,
+        "cuda_event_ms": 1107.5169677734375
+      },
+      {
+        "wall_ms": 1108.7212059646845,
+        "cuda_event_ms": 1108.673583984375
+      },
+      {
+        "wall_ms": 1108.184688957408,
+        "cuda_event_ms": 1108.1339111328125
+      },
+      {
+        "wall_ms": 1109.582040924579,
+        "cuda_event_ms": 1109.523681640625
+      },
+      {
+        "wall_ms": 1110.1488389540464,
+        "cuda_event_ms": 1110.0831298828125
+      },
+      {
+        "wall_ms": 1111.5941309835762,
+        "cuda_event_ms": 1111.516357421875
+      },
+      {
+        "wall_ms": 1111.0226550372317,
+        "cuda_event_ms": 1110.9539794921875
+      },
+      {
+        "wall_ms": 1110.130719956942,
+        "cuda_event_ms": 1110.0792236328125
+      },
+      {
+        "wall_ms": 1110.4030690621585,
+        "cuda_event_ms": 1110.35498046875
+      },
+      {
+        "wall_ms": 1110.8575970865786,
+        "cuda_event_ms": 1110.80908203125
+      },
+      {
+        "wall_ms": 1111.5867929765955,
+        "cuda_event_ms": 1111.5400390625
+      },
+      {
+        "wall_ms": 1111.3436449086294,
+        "cuda_event_ms": 1111.296630859375
+      }
+    ],
+    "median_wall_ms": 1106.3325019786134,
+    "warmup_seconds": 3.278687495039776,
+    "warmup_ms": [
+      1092.4683869816363,
+      1092.695836094208,
+      1093.346182955429
+    ],
+    "within_process_quarter_span": 0.011870865995576185,
+    "quality": {
+      "status": "stable_timing",
+      "timing_warnings": []
+    }
+  },
+  "memory": {
+    "probes": [
+      {
+        "baseline_allocated_bytes": 290406400,
+        "baseline_reserved_bytes": 32763805696,
+        "absolute_peak_allocated_bytes": 13477849088,
+        "incremental_peak_allocated_bytes": 13187442688,
+        "peak_reserved_bytes": 32763805696
+      },
+      {
+        "baseline_allocated_bytes": 290406400,
+        "baseline_reserved_bytes": 32763805696,
+        "absolute_peak_allocated_bytes": 13477849088,
+        "incremental_peak_allocated_bytes": 13187442688,
+        "peak_reserved_bytes": 32763805696
+      },
+      {
+        "baseline_allocated_bytes": 290406400,
+        "baseline_reserved_bytes": 32763805696,
+        "absolute_peak_allocated_bytes": 13477849088,
+        "incremental_peak_allocated_bytes": 13187442688,
+        "peak_reserved_bytes": 32763805696
+      }
+    ],
+    "final_invariants": {
+      "finite": true,
+      "fp32_parameters": true,
+      "fp32_parameter_gradients": true,
+      "fp16_states": true,
+      "fp16_state_gradients": true,
+      "loss_fp32": true,
+      "dropout": true
+    }
+  },
+  "cleanup": {
+    "before_bytes": 290406400,
+    "after_bytes": 290406400
+  },
+  "status": "measured",
+  "interference": {
+    "status": "pass",
+    "initial": {
+      "memory_MiB": 508,
+      "utilization_percent": 0
+    },
+    "interval_seconds": 0.5,
+    "monitor_cpus": [
+      13,
+      14,
+      15
+    ],
+    "samples": [
+      {
+        "monotonic": 678021.070638049,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678021.624333974,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678022.178640275,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678022.746644341,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678023.487201145,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678024.038728793,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678024.592217079,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678025.149361615,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678025.70874148,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678026.263720848,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678027.040105786,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678027.609780163,
+        "processes": [
+          {
+            "memory_MiB": "498"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678028.170284182,
+        "processes": [
+          {
+            "memory_MiB": "1682"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678028.727875686,
+        "processes": [
+          {
+            "memory_MiB": "5026"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678029.286291006,
+        "processes": [
+          {
+            "memory_MiB": "10334"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678029.844746746,
+        "processes": [
+          {
+            "memory_MiB": "10334"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678030.401777145,
+        "processes": [
+          {
+            "memory_MiB": "10334"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678030.957582829,
+        "processes": [
+          {
+            "memory_MiB": "15388"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678031.518054509,
+        "processes": [
+          {
+            "memory_MiB": "15396"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678032.074734589,
+        "processes": [
+          {
+            "memory_MiB": "20514"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678032.632168465,
+        "processes": [
+          {
+            "memory_MiB": "20514"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678033.185359245,
+        "processes": [
+          {
+            "memory_MiB": "20514"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678033.741037871,
+        "processes": [
+          {
+            "memory_MiB": "25668"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678034.297398593,
+        "processes": [
+          {
+            "memory_MiB": "30922"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678034.855251467,
+        "processes": [
+          {
+            "memory_MiB": "13152"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678035.412579975,
+        "processes": [
+          {
+            "memory_MiB": "26622"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678035.970887747,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678036.526853871,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678037.086360657,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678037.642970349,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678038.202185046,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678038.759791312,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678039.317652437,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678039.874348149,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678040.432440933,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678040.989385014,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678041.548247804,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678042.105549703,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678042.660509634,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678043.215324637,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678043.771138164,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678044.328484793,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678044.881616814,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678045.434485638,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678045.989076862,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678046.543554447,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678047.096247422,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678047.654892684,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678048.211930815,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678048.770880866,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678049.328787162,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678049.883617576,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678050.437117327,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678050.992254029,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678051.545614211,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678052.101175691,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678052.65499733,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678053.209798125,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678053.763570055,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678054.319626252,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678054.874728705,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678055.431531899,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678055.985928976,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678056.542060813,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678057.093839825,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678057.649049828,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678058.202359771,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678058.757483435,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678059.312958246,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678059.868960935,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678060.421129565,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678060.975483663,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678061.526788298,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678062.081271716,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678062.687596418,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678063.260195616,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678063.811145463,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678064.36578876,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678064.928494073,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678065.485580427,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678066.038162356,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678066.592178396,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678067.144576186,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678067.697806012,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678068.246366763,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678068.796364906,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678069.345932322,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678069.897696976,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678070.44762971,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678070.999747322,
+        "processes": [
+          {
+            "memory_MiB": "31876"
+          }
+        ],
+        "foreign_processes": 0
+      },
+      {
+        "monotonic": 678071.290165394,
+        "processes": [
+          {
+            "memory_MiB": "31878"
+          }
+        ],
+        "foreign_processes": 0
+      }
+    ],
+    "errors": []
+  }
+}

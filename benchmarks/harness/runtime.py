@@ -71,7 +71,7 @@ def inspect(machine):
         "nvcc/PyTorch CUDA major.minor mismatch",
     )
     devices = []
-    for i, token in enumerate(
+    for i, _ in enumerate(
         visible_tokens(
             torch.cuda.device_count(), os.environ.get("CUDA_VISIBLE_DEVICES")
         )
@@ -79,9 +79,7 @@ def inspect(machine):
         p = torch.cuda.get_device_properties(i)
         devices.append(
             dict(
-                token=token,
                 name=p.name,
-                uuid=str(p.uuid),
                 capability=[p.major, p.minor],
                 total_memory=p.total_memory,
             )
