@@ -1,0 +1,34 @@
+# Local research archive, credentials and machine-specific configuration.
+/.local/
+/.agents/
+/.codex/
+.env
+.env.*
+!*.example
+
+# Rebuildable outputs and caches (committed figure PDFs are sources for LaTeX).
+/build/
+results/raw/*/coordinator.lock
+/dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+*.aux
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.DS_Store
+
+# Temporary: pipeline outputs, left out to test a from-scratch reproduction.
+/data/tokenizer/tokenizer.model
+/data/workloads/
+
+/draft/figures/**/*.pdf
+/draft/figures/**/*.svg
