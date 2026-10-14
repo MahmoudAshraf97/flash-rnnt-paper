@@ -40,3 +40,4 @@ how specialization and recomputation contribute to their throughput–memory
 tradeoffs. On the evaluated medium and long workloads, the two variants together
 form the entire measured frontier on both GPUs, offering higher-throughput
 untiled execution and lower-memory tiled execution.
+Code, benchmark scripts and results are available online.\footnote{\url{https://github.com/MahmoudAshraf97/flash-rnnt-paper}}
