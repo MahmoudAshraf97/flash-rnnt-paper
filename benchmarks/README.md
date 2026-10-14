@@ -27,9 +27,9 @@ flags are in [dependencies/](dependencies/README.md).
 
 ## Measurements
 
-The run writes `../results/raw/comparison/` and `../results/raw/ablation/`.
+The run writes `../results/local/raw/comparison/` and `../results/local/raw/ablation/`.
 A local run is resumed when its environment, settings, workloads and sources
-match, and replaced otherwise. Published results in a fresh clone are replaced;
+match, and replaced otherwise. Published H100 and RTX 5090 results stay untouched;
 repeat the command to resume an interrupted run. Use `--output PATH` to write
 elsewhere and `--study comparison` or `--study ablation` to run just one study.
 
@@ -49,6 +49,8 @@ own workload before warm-up. OOMs are confirmed in a fresh process. One worker
 runs per idle GPU.
 
 Each study folder holds its manifest, worker records and summary. From the
-repository root, `make results figures` turns them into the result tables,
-CSVs and the paper figure. The paper reports RTX 5090 measurements; other GPUs
-need their own build and measurements.
+repository root, `make results` turns the local run into tables and CSVs.
+To plot it, run `uv run --locked python -m analysis_tools.plot_frontiers
+--source results/local/raw/comparison --output build/figures/local`.
+The paper figure uses the supplied H100 results; RTX 5090 results provide a
+cross-GPU comparison. Other GPUs need their own build and measurements.
