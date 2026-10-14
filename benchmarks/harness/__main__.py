@@ -1,6 +1,6 @@
 """Build the benchmark backends and run the comparison and ablation studies.
 
-Records go to results/raw/ by default. A local run with matching environment,
+Records go to results/local/raw/ by default. A local run with matching environment,
 settings, workloads and sources is resumed; any other is replaced.
 """
 
@@ -19,7 +19,7 @@ def main():
     parser.add_argument(
         "--study", choices=("comparison", "ablation", "all"), default="all"
     )
-    parser.add_argument("--output", type=Path, default=ROOT.parent / "results/raw")
+    parser.add_argument("--output", type=Path, default=ROOT.parent / "results/local/raw")
     parser.add_argument(
         "--workloads", type=Path, default=ROOT.parent / "data/workloads/workloads.json"
     )

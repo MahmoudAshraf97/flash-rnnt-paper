@@ -2,7 +2,7 @@
 
 ## 3.1 Tiled joint computation and checkpointing
 
-Flash RNN-T evaluates the joint network in small groups of alignment positions
+Tiled Flash RNN-T evaluates the joint network in small groups of alignment positions
 called tiles. For each tile, it retains the compact blank and target transition
 log probabilities while discarding the larger hidden states and logits, which
 are recomputed during backpropagation.

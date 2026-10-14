@@ -22,8 +22,10 @@ However, avoiding padded positions and processing utterances separately do not,
 by themselves, bound the large intermediate tensors produced within a single
 utterance. This motivates finer-grained control over their storage and lifetime.
 
-We introduce Flash RNN-T, which divides joint network computation into groups
-of alignment positions, including within a single utterance. For each group,
+We introduce Flash RNN-T, a joint and loss implementation combining specialized
+GPU kernels with optional tiled checkpointing. Its tiled variant divides joint
+network computation into groups of alignment positions, including within a
+single utterance. For each group,
 it computes the blank and target transition log probabilities needed by the
 forward–backward recurrence, while discarding the much larger hidden states and
 vocabulary logits.
@@ -33,10 +35,8 @@ them one group at a time during backpropagation, trading additional computation
 for control over their memory footprint. All valid alignment positions
 and the full vocabulary are still evaluated, preserving the RNN-T objective.
 
-Flash RNN-T combines this memory management strategy with specialized GPU kernels
-for joint network and loss computation. We evaluate the resulting throughput–memory
-tradeoff against existing implementations and examine how kernel specialization
-and the choice to retain or recompute intermediate tensors contribute to it.
-On the evaluated medium and long workloads, Flash RNN-T substantially reduces
-peak allocated memory while maintaining competitive joint-and-loss throughput
-against existing implementations.
+We evaluate tiled and untiled Flash against existing implementations and examine
+how specialization and recomputation contribute to their throughput–memory
+tradeoffs. On the evaluated medium and long workloads, the two variants together
+form the entire measured frontier on both GPUs, offering higher-throughput
+untiled execution and lower-memory tiled execution.

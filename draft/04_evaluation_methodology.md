@@ -18,8 +18,9 @@ Within each duration band, we select the batch closest to the band’s median
 duration, alignment-position count and padding fraction.
 
 All experiments use $B=128$, $H=640$, a SentencePiece BPE [14](https://doi.org/10.18653/v1/D18-2012) vocabulary of $V=1024$
-including blank, 80 ms encoder steps, and joint dropout of 0.1 on NVIDIA RTX
-5090 GPUs with 32 GB memory.
+including blank, 80 ms encoder steps, and joint dropout of 0.1. We evaluate
+primarily on NVIDIA H100 GPUs with 80 GB memory and repeat the experiments on
+RTX 5090 GPUs with 32 GB to assess hardware dependence.
 
 | Workload | Mean duration (s) | Encoder length $T$ | Transcript length $U$ | Valid alignment positions |
 |---|---:|---:|---:|---:|

@@ -1,0 +1,4391 @@
+{
+  "status": "complete",
+  "cells": [
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_tiled_25000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 25000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 334359040,
+      "incremental_allocated_bytes": 244910592,
+      "reserved_bytes": 503316480,
+      "median_ms": 14.89682799979164,
+      "samples_per_second": 8592.433234900096,
+      "within_process_quarter_span": 0.010530585903069545,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_tiled_50000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 50000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 412726784,
+      "incremental_allocated_bytes": 323278336,
+      "reserved_bytes": 564133888,
+      "median_ms": 8.675013500010209,
+      "samples_per_second": 14755.020265945333,
+      "within_process_quarter_span": 0.008644290367098018,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_tiled_100000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 100000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 568996864,
+      "incremental_allocated_bytes": 479548416,
+      "reserved_bytes": 819986432,
+      "median_ms": 6.883907999963412,
+      "samples_per_second": 18594.089287753457,
+      "within_process_quarter_span": 0.0008145795585057236,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_tiled_200000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 764812800,
+      "incremental_allocated_bytes": 675364352,
+      "reserved_bytes": 1023410176,
+      "median_ms": 6.69613200011554,
+      "samples_per_second": 19115.51325418785,
+      "within_process_quarter_span": 0.002199269624232336,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_tiled_400000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 400000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1397297664,
+      "incremental_allocated_bytes": 1307849216,
+      "reserved_bytes": 1671430144,
+      "median_ms": 6.377672999860806,
+      "samples_per_second": 20070.016133281468,
+      "within_process_quarter_span": 0.0009755763853029897,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_tiled_800000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 800000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1397297664,
+      "incremental_allocated_bytes": 1307849216,
+      "reserved_bytes": 1671430144,
+      "median_ms": 6.359176000046318,
+      "samples_per_second": 20128.393993037414,
+      "within_process_quarter_span": 0.002246217698649966,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_full_batch",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1541558272,
+      "incremental_allocated_bytes": 1452109824,
+      "reserved_bytes": 1621098496,
+      "median_ms": 4.987970000001951,
+      "samples_per_second": 25661.74215160675,
+      "within_process_quarter_span": 0.000750639031735334,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_1",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1119192064,
+      "incremental_allocated_bytes": 1029743616,
+      "reserved_bytes": 1191182336,
+      "median_ms": 172.85196149998683,
+      "samples_per_second": 740.5180646446396,
+      "within_process_quarter_span": 0.008334037290010254,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_2",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1142556672,
+      "incremental_allocated_bytes": 1053108224,
+      "reserved_bytes": 1365245952,
+      "median_ms": 86.47017599992068,
+      "samples_per_second": 1480.2791658492451,
+      "within_process_quarter_span": 0.009495259499858522,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_4",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1183698944,
+      "incremental_allocated_bytes": 1094250496,
+      "reserved_bytes": 1503657984,
+      "median_ms": 46.28632200001448,
+      "samples_per_second": 2765.395790142063,
+      "within_process_quarter_span": 0.007308960656218666,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_8",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1259509248,
+      "incremental_allocated_bytes": 1170060800,
+      "reserved_bytes": 1486880768,
+      "median_ms": 22.672079000130907,
+      "samples_per_second": 5645.710744006358,
+      "within_process_quarter_span": 0.005002470184374719,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_16",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1272414720,
+      "incremental_allocated_bytes": 1182966272,
+      "reserved_bytes": 1499463680,
+      "median_ms": 12.271230000123978,
+      "samples_per_second": 10430.902199592607,
+      "within_process_quarter_span": 0.013869065169691108,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_32",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1314230272,
+      "incremental_allocated_bytes": 1224781824,
+      "reserved_bytes": 1604321280,
+      "median_ms": 7.1698720000767935,
+      "samples_per_second": 17852.480490394955,
+      "within_process_quarter_span": 0.009791440187684408,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_retain_64",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1402626560,
+      "incremental_allocated_bytes": 1313178112,
+      "reserved_bytes": 1463812096,
+      "median_ms": 5.154858999958378,
+      "samples_per_second": 24830.94105988806,
+      "within_process_quarter_span": 0.0018160014792349966,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_1",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 179411968,
+      "incremental_allocated_bytes": 89963520,
+      "reserved_bytes": 364904448,
+      "median_ms": 205.2265989998432,
+      "samples_per_second": 623.7008293457019,
+      "within_process_quarter_span": 0.017669811790788525,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_2",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 217223168,
+      "incremental_allocated_bytes": 127774720,
+      "reserved_bytes": 364904448,
+      "median_ms": 103.7109630001396,
+      "samples_per_second": 1234.1993198908751,
+      "within_process_quarter_span": 0.018800101111165368,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_4",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 271438848,
+      "incremental_allocated_bytes": 181990400,
+      "reserved_bytes": 367001600,
+      "median_ms": 51.01081949999298,
+      "samples_per_second": 2509.2715869820054,
+      "within_process_quarter_span": 0.009420344886929666,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_8",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 361428480,
+      "incremental_allocated_bytes": 271980032,
+      "reserved_bytes": 505413632,
+      "median_ms": 25.826250999898548,
+      "samples_per_second": 4956.197475216314,
+      "within_process_quarter_span": 0.012150866532545823,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_16",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 450211840,
+      "incremental_allocated_bytes": 360763392,
+      "reserved_bytes": 643825664,
+      "median_ms": 13.202950000049896,
+      "samples_per_second": 9694.803055341137,
+      "within_process_quarter_span": 0.009323141960875247,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_32",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 612831744,
+      "incremental_allocated_bytes": 523383296,
+      "reserved_bytes": 874512384,
+      "median_ms": 7.236911500058341,
+      "samples_per_second": 17687.103123890367,
+      "within_process_quarter_span": 0.008228698784427113,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "flash_untiled_release_64",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 939176960,
+      "incremental_allocated_bytes": 849728512,
+      "reserved_bytes": 1453326336,
+      "median_ms": 5.0909320000300795,
+      "samples_per_second": 25142.744000360584,
+      "within_process_quarter_span": 0.0014534446699652204,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_full_batch",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3531903488,
+      "incremental_allocated_bytes": 3442455040,
+      "reserved_bytes": 3575644160,
+      "median_ms": 4.754982999997992,
+      "samples_per_second": 26919.128838116572,
+      "within_process_quarter_span": 0.0014676981247674359,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_1",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1901151232,
+      "incremental_allocated_bytes": 1811702784,
+      "reserved_bytes": 2011168768,
+      "median_ms": 70.25793100001465,
+      "samples_per_second": 1821.858374963722,
+      "within_process_quarter_span": 0.011838598276533663,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_2",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1905275904,
+      "incremental_allocated_bytes": 1815827456,
+      "reserved_bytes": 2229272576,
+      "median_ms": 38.638527000046,
+      "samples_per_second": 3312.7556855324124,
+      "within_process_quarter_span": 0.0012458110224489172,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_4",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1924189696,
+      "incremental_allocated_bytes": 1834741248,
+      "reserved_bytes": 2357198848,
+      "median_ms": 19.68038500001512,
+      "samples_per_second": 6503.937804057271,
+      "within_process_quarter_span": 0.008196239763371471,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_8",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1978575360,
+      "incremental_allocated_bytes": 1889126912,
+      "reserved_bytes": 2222981120,
+      "median_ms": 11.363164500039602,
+      "samples_per_second": 11264.467745719418,
+      "within_process_quarter_span": 0.001889332785454334,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_16",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2069692928,
+      "incremental_allocated_bytes": 1980244480,
+      "reserved_bytes": 2348810240,
+      "median_ms": 7.406574000015098,
+      "samples_per_second": 17281.944391528265,
+      "within_process_quarter_span": 0.0012845540498820363,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_32",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2278190080,
+      "incremental_allocated_bytes": 2188741632,
+      "reserved_bytes": 2720006144,
+      "median_ms": 5.744953000089481,
+      "samples_per_second": 22280.42596658429,
+      "within_process_quarter_span": 0.0004627540396471286,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_retain_64",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2722392576,
+      "incremental_allocated_bytes": 2632944128,
+      "reserved_bytes": 3017801728,
+      "median_ms": 5.275686000004498,
+      "samples_per_second": 24262.247601523453,
+      "within_process_quarter_span": 0.0008526143167799649,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_1",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 183000064,
+      "incremental_allocated_bytes": 93551616,
+      "reserved_bytes": 245366784,
+      "median_ms": 97.1348499999749,
+      "samples_per_second": 1317.7556767734038,
+      "within_process_quarter_span": 0.04443336482330551,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_2",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 221615616,
+      "incremental_allocated_bytes": 132167168,
+      "reserved_bytes": 314572800,
+      "median_ms": 54.19644799997059,
+      "samples_per_second": 2361.77839551532,
+      "within_process_quarter_span": 0.034930621274142704,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_4",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 279297536,
+      "incremental_allocated_bytes": 189849088,
+      "reserved_bytes": 507510784,
+      "median_ms": 25.374103000103787,
+      "samples_per_second": 5044.513297651406,
+      "within_process_quarter_span": 0.03181146650058553,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_8",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 374087168,
+      "incremental_allocated_bytes": 284638720,
+      "reserved_bytes": 750780416,
+      "median_ms": 13.232279000021663,
+      "samples_per_second": 9673.31477818677,
+      "within_process_quarter_span": 0.014781372236259305,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_16",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 597726720,
+      "incremental_allocated_bytes": 508278272,
+      "reserved_bytes": 960495616,
+      "median_ms": 6.985952999912115,
+      "samples_per_second": 18322.482272871042,
+      "within_process_quarter_span": 0.006782904161744208,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_32",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1023570944,
+      "incremental_allocated_bytes": 934122496,
+      "reserved_bytes": 1738539008,
+      "median_ms": 5.714036999961536,
+      "samples_per_second": 22400.975002587773,
+      "within_process_quarter_span": 0.0012216489765739524,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "apex_release_64",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1887106560,
+      "incremental_allocated_bytes": 1797658112,
+      "reserved_bytes": 3271557120,
+      "median_ms": 5.249585499996101,
+      "samples_per_second": 24382.877467200993,
+      "within_process_quarter_span": 0.002370387382250261,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_full_batch",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3383372800,
+      "incremental_allocated_bytes": 3293924352,
+      "reserved_bytes": 3672113152,
+      "median_ms": 13.443588500024362,
+      "samples_per_second": 9521.26733124627,
+      "within_process_quarter_span": 0.005543645109204354,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_1",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1701761536,
+      "incremental_allocated_bytes": 1612313088,
+      "reserved_bytes": 1778384896,
+      "median_ms": 289.58499299994855,
+      "samples_per_second": 442.01185522076673,
+      "within_process_quarter_span": 0.01660906885738833,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_2",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1916482560,
+      "incremental_allocated_bytes": 1827034112,
+      "reserved_bytes": 2222981120,
+      "median_ms": 146.60281900006567,
+      "samples_per_second": 873.1073581875849,
+      "within_process_quarter_span": 0.02069810148919804,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_4",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2148859904,
+      "incremental_allocated_bytes": 2059411456,
+      "reserved_bytes": 2640314368,
+      "median_ms": 74.17204399996535,
+      "samples_per_second": 1725.7175762887132,
+      "within_process_quarter_span": 0.011741844059008688,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_8",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2343989760,
+      "incremental_allocated_bytes": 2254541312,
+      "reserved_bytes": 2696937472,
+      "median_ms": 40.03795800002763,
+      "samples_per_second": 3196.9662388854013,
+      "within_process_quarter_span": 0.009153788753637704,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_16",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2465334784,
+      "incremental_allocated_bytes": 2375886336,
+      "reserved_bytes": 2925527040,
+      "median_ms": 24.450862999970013,
+      "samples_per_second": 5234.989047223281,
+      "within_process_quarter_span": 0.004657265705173774,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_32",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2555710976,
+      "incremental_allocated_bytes": 2466262528,
+      "reserved_bytes": 3162505216,
+      "median_ms": 16.966004000039447,
+      "samples_per_second": 7544.498987487118,
+      "within_process_quarter_span": 0.0014479318630991056,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_retain_64",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2834598912,
+      "incremental_allocated_bytes": 2745150464,
+      "reserved_bytes": 3141533696,
+      "median_ms": 14.318282999965959,
+      "samples_per_second": 8939.619366393605,
+      "within_process_quarter_span": 0.005691364239668539,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_1",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 188201984,
+      "incremental_allocated_bytes": 98753536,
+      "reserved_bytes": 243269632,
+      "median_ms": 321.507370000063,
+      "samples_per_second": 398.1246215288157,
+      "within_process_quarter_span": 0.009782271982822666,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_2",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 239741952,
+      "incremental_allocated_bytes": 150293504,
+      "reserved_bytes": 350224384,
+      "median_ms": 156.8685195000512,
+      "samples_per_second": 815.9699626664624,
+      "within_process_quarter_span": 0.014058295255951592,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_4",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 344021504,
+      "incremental_allocated_bytes": 254573056,
+      "reserved_bytes": 517996544,
+      "median_ms": 79.30644299995038,
+      "samples_per_second": 1613.992446995512,
+      "within_process_quarter_span": 0.02580918990717751,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_8",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 456736256,
+      "incremental_allocated_bytes": 367287808,
+      "reserved_bytes": 668991488,
+      "median_ms": 41.02628749996029,
+      "samples_per_second": 3119.9508364027306,
+      "within_process_quarter_span": 0.03846649354892828,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_16",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 640107008,
+      "incremental_allocated_bytes": 550658560,
+      "reserved_bytes": 778043392,
+      "median_ms": 23.766829999999572,
+      "samples_per_second": 5385.657237418802,
+      "within_process_quarter_span": 0.00720653110487568,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_32",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1006675968,
+      "incremental_allocated_bytes": 917227520,
+      "reserved_bytes": 1275068416,
+      "median_ms": 16.57878699995763,
+      "samples_per_second": 7720.709603201195,
+      "within_process_quarter_span": 0.005378208925176375,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "numba_release_64",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1776471552,
+      "incremental_allocated_bytes": 1687023104,
+      "reserved_bytes": 1887436800,
+      "median_ms": 14.11984899999652,
+      "samples_per_second": 9065.25275164285,
+      "within_process_quarter_span": 0.0012836931332225188,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_full_batch",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3317884416,
+      "incremental_allocated_bytes": 3228435968,
+      "reserved_bytes": 4106223616,
+      "median_ms": 34.4493310000189,
+      "samples_per_second": 3715.6019082033777,
+      "within_process_quarter_span": 0.0005088733995506356,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_1",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2290961920,
+      "incremental_allocated_bytes": 2201513472,
+      "reserved_bytes": 2371878912,
+      "median_ms": 276.6043190000005,
+      "samples_per_second": 462.7548856169515,
+      "within_process_quarter_span": 0.004879257705376228,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_2",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2291864576,
+      "incremental_allocated_bytes": 2202416128,
+      "reserved_bytes": 2596274176,
+      "median_ms": 146.6231879999782,
+      "samples_per_second": 872.9860654783951,
+      "within_process_quarter_span": 0.004538145134848515,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_4",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2319024640,
+      "incremental_allocated_bytes": 2229576192,
+      "reserved_bytes": 2728394752,
+      "median_ms": 83.03407699997933,
+      "samples_per_second": 1541.535772114765,
+      "within_process_quarter_span": 0.0073390525767413894,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_8",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2409051136,
+      "incremental_allocated_bytes": 2319602688,
+      "reserved_bytes": 2665480192,
+      "median_ms": 50.567542000010235,
+      "samples_per_second": 2531.2679821371207,
+      "within_process_quarter_span": 0.0021396844084939914,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_16",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2464648704,
+      "incremental_allocated_bytes": 2375200256,
+      "reserved_bytes": 2648702976,
+      "median_ms": 34.98213799997529,
+      "samples_per_second": 3659.0102068687283,
+      "within_process_quarter_span": 0.00676290845646399,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_32",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2576427008,
+      "incremental_allocated_bytes": 2486978560,
+      "reserved_bytes": 2789212160,
+      "median_ms": 25.819094000041787,
+      "samples_per_second": 4957.571322982628,
+      "within_process_quarter_span": 0.005267144584093053,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_retain_64",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2816186368,
+      "incremental_allocated_bytes": 2726737920,
+      "reserved_bytes": 3300917248,
+      "median_ms": 24.761214499989137,
+      "samples_per_second": 5169.374870528106,
+      "within_process_quarter_span": 0.0013815438038118355,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_1",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 201827328,
+      "incremental_allocated_bytes": 112378880,
+      "reserved_bytes": 245366784,
+      "median_ms": 257.0907369999986,
+      "samples_per_second": 497.8786925333708,
+      "within_process_quarter_span": 0.0014649270105828727,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_2",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 256719872,
+      "incremental_allocated_bytes": 167271424,
+      "reserved_bytes": 314572800,
+      "median_ms": 135.7121849999885,
+      "samples_per_second": 943.1724940543169,
+      "within_process_quarter_span": 0.0016838995941270696,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_4",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 336600576,
+      "incremental_allocated_bytes": 247152128,
+      "reserved_bytes": 524288000,
+      "median_ms": 75.1670450000006,
+      "samples_per_second": 1702.8739123641083,
+      "within_process_quarter_span": 0.002313462561239099,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_8",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 476868608,
+      "incremental_allocated_bytes": 387420160,
+      "reserved_bytes": 773849088,
+      "median_ms": 45.61498450001977,
+      "samples_per_second": 2806.0954399742154,
+      "within_process_quarter_span": 0.0008289935299339302,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_16",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 679251968,
+      "incremental_allocated_bytes": 589803520,
+      "reserved_bytes": 1170210816,
+      "median_ms": 30.354935999980626,
+      "samples_per_second": 4216.777133052816,
+      "within_process_quarter_span": 0.0011740156234052446,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_32",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1052402176,
+      "incremental_allocated_bytes": 962953728,
+      "reserved_bytes": 1860173824,
+      "median_ms": 24.011606499982463,
+      "samples_per_second": 5330.755357834699,
+      "within_process_quarter_span": 0.018558817920753645,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "short",
+      "config": {
+        "id": "optimized_release_64",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1804116480,
+      "incremental_allocated_bytes": 1714668032,
+      "reserved_bytes": 3300917248,
+      "median_ms": 24.691500000017186,
+      "samples_per_second": 5183.970192167787,
+      "within_process_quarter_span": 0.001766388421742482,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_tiled_25000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 25000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 432212480,
+      "incremental_allocated_bytes": 306508288,
+      "reserved_bytes": 599785472,
+      "median_ms": 104.42634950004503,
+      "samples_per_second": 1225.744274436643,
+      "within_process_quarter_span": 0.05881881737622763,
+      "timing_quality": {
+        "status": "timing_warning",
+        "timing_warnings": [
+          "Within-process timing drift >5%"
+        ]
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_tiled_50000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 50000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 513674240,
+      "incremental_allocated_bytes": 387970048,
+      "reserved_bytes": 778043392,
+      "median_ms": 63.255007500060856,
+      "samples_per_second": 2023.5552102318043,
+      "within_process_quarter_span": 0.010034361187697183,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_tiled_100000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 100000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 669671936,
+      "incremental_allocated_bytes": 543967744,
+      "reserved_bytes": 819986432,
+      "median_ms": 52.782752499979324,
+      "samples_per_second": 2425.0345792415833,
+      "within_process_quarter_span": 0.0020631377910604876,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_tiled_200000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1094859776,
+      "incremental_allocated_bytes": 969155584,
+      "reserved_bytes": 1520435200,
+      "median_ms": 46.954822999850876,
+      "samples_per_second": 2726.024544920689,
+      "within_process_quarter_span": 0.002308964165841587,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_tiled_400000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 400000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1977349632,
+      "incremental_allocated_bytes": 1851645440,
+      "reserved_bytes": 2791309312,
+      "median_ms": 45.08282300002975,
+      "samples_per_second": 2839.2188306379026,
+      "within_process_quarter_span": 0.0033181709812601934,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_tiled_800000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 800000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3744807936,
+      "incremental_allocated_bytes": 3619103744,
+      "reserved_bytes": 4752146432,
+      "median_ms": 44.32950050011186,
+      "samples_per_second": 2887.4676807981855,
+      "within_process_quarter_span": 0.0013454009635860409,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_full_batch",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 11024856064,
+      "incremental_allocated_bytes": 10899151872,
+      "reserved_bytes": 11146362880,
+      "median_ms": 33.54877349988783,
+      "samples_per_second": 3815.3406711106136,
+      "within_process_quarter_span": 0.0005052680253077035,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_1",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 8149135360,
+      "incremental_allocated_bytes": 8023431168,
+      "reserved_bytes": 8547991552,
+      "median_ms": 179.19261350004945,
+      "samples_per_second": 714.3151578620436,
+      "within_process_quarter_span": 0.01098624728755948,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_2",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 8196561920,
+      "incremental_allocated_bytes": 8070857728,
+      "reserved_bytes": 8430551040,
+      "median_ms": 85.97664699993857,
+      "samples_per_second": 1488.7763650528434,
+      "within_process_quarter_span": 0.01204959842508635,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_4",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 8227212288,
+      "incremental_allocated_bytes": 8101508096,
+      "reserved_bytes": 8317304832,
+      "median_ms": 50.82856350009024,
+      "samples_per_second": 2518.2690830869683,
+      "within_process_quarter_span": 0.0077972418574616675,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_8",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 8291819008,
+      "incremental_allocated_bytes": 8166114816,
+      "reserved_bytes": 8399093760,
+      "median_ms": 37.730284000190295,
+      "samples_per_second": 3392.500305572956,
+      "within_process_quarter_span": 0.0036630313599268494,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_16",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 8470626816,
+      "incremental_allocated_bytes": 8344922624,
+      "reserved_bytes": 8520728576,
+      "median_ms": 32.43368399989777,
+      "samples_per_second": 3946.514370689542,
+      "within_process_quarter_span": 0.002681825122546666,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_32",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 8977152000,
+      "incremental_allocated_bytes": 8851447808,
+      "reserved_bytes": 9028239360,
+      "median_ms": 30.258885999955965,
+      "samples_per_second": 4230.162339756535,
+      "within_process_quarter_span": 0.0014301055326182421,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_retain_64",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 9657362432,
+      "incremental_allocated_bytes": 9531658240,
+      "reserved_bytes": 9743368192,
+      "median_ms": 29.59439400001429,
+      "samples_per_second": 4325.1434714269935,
+      "within_process_quarter_span": 0.0009993229581879426,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_1",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 491613696,
+      "incremental_allocated_bytes": 365909504,
+      "reserved_bytes": 629145600,
+      "median_ms": 201.05857899989132,
+      "samples_per_second": 636.6303822333748,
+      "within_process_quarter_span": 0.013727005686024363,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_2",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 592795648,
+      "incremental_allocated_bytes": 467091456,
+      "reserved_bytes": 908066816,
+      "median_ms": 106.97871899992606,
+      "samples_per_second": 1196.4996514875868,
+      "within_process_quarter_span": 0.007614065715091156,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_4",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 777237504,
+      "incremental_allocated_bytes": 651533312,
+      "reserved_bytes": 1459617792,
+      "median_ms": 52.62650249994749,
+      "samples_per_second": 2432.2345951097113,
+      "within_process_quarter_span": 0.01135976941422312,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_8",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1120944640,
+      "incremental_allocated_bytes": 995240448,
+      "reserved_bytes": 2323644416,
+      "median_ms": 37.68730100000539,
+      "samples_per_second": 3396.3695091877685,
+      "within_process_quarter_span": 0.002388447709737118,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_16",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 1829393408,
+      "incremental_allocated_bytes": 1703689216,
+      "reserved_bytes": 2883584000,
+      "median_ms": 32.485730499956844,
+      "samples_per_second": 3940.191525019579,
+      "within_process_quarter_span": 0.0010625393862968568,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_32",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 3246408192,
+      "incremental_allocated_bytes": 3120704000,
+      "reserved_bytes": 5242880000,
+      "median_ms": 30.291699999906996,
+      "samples_per_second": 4225.579944354163,
+      "within_process_quarter_span": 0.0022936005109046587,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "flash_untiled_release_64",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 5916517376,
+      "incremental_allocated_bytes": 5790813184,
+      "reserved_bytes": 5993660416,
+      "median_ms": 29.466550999927676,
+      "samples_per_second": 4343.908454040453,
+      "within_process_quarter_span": 0.0006404380628444173,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_full_batch",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 28122263040,
+      "incremental_allocated_bytes": 27996558848,
+      "reserved_bytes": 28210888704,
+      "median_ms": 36.58051299998988,
+      "samples_per_second": 3499.1308077072463,
+      "within_process_quarter_span": 0.0016359323347323595,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_1",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 14276104704,
+      "incremental_allocated_bytes": 14150400512,
+      "reserved_bytes": 15118368768,
+      "median_ms": 84.68454100000145,
+      "samples_per_second": 1511.4919262536691,
+      "within_process_quarter_span": 0.012934018180728035,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_2",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 14427707904,
+      "incremental_allocated_bytes": 14302003712,
+      "reserved_bytes": 15411970048,
+      "median_ms": 57.80838999999105,
+      "samples_per_second": 2214.2114665366016,
+      "within_process_quarter_span": 0.0158488136151409,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_4",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 14608029184,
+      "incremental_allocated_bytes": 14482324992,
+      "reserved_bytes": 16546529280,
+      "median_ms": 47.46569900009945,
+      "samples_per_second": 2696.684188717664,
+      "within_process_quarter_span": 0.002206009062774017,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_8",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 15054692352,
+      "incremental_allocated_bytes": 14928988160,
+      "reserved_bytes": 16290676736,
+      "median_ms": 42.03610400003299,
+      "samples_per_second": 3045.001506321793,
+      "within_process_quarter_span": 0.002501285471394832,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_16",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 15921437696,
+      "incremental_allocated_bytes": 15795733504,
+      "reserved_bytes": 17712545792,
+      "median_ms": 39.12061549999635,
+      "samples_per_second": 3271.932160679117,
+      "within_process_quarter_span": 0.0021923283028206786,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_32",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17700165632,
+      "incremental_allocated_bytes": 17574461440,
+      "reserved_bytes": 20367540224,
+      "median_ms": 37.73162000004504,
+      "samples_per_second": 3392.3801840431765,
+      "within_process_quarter_span": 0.0014037762628644757,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_retain_64",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 21070380544,
+      "incremental_allocated_bytes": 20944676352,
+      "reserved_bytes": 26115833856,
+      "median_ms": 37.056604000042626,
+      "samples_per_second": 3454.175131640578,
+      "within_process_quarter_span": 0.0020562022146703995,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_1",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 529876992,
+      "incremental_allocated_bytes": 404172800,
+      "reserved_bytes": 989855744,
+      "median_ms": 98.01899700005379,
+      "samples_per_second": 1305.86931021065,
+      "within_process_quarter_span": 0.02025042090554985,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_2",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 797078528,
+      "incremental_allocated_bytes": 671374336,
+      "reserved_bytes": 2132803584,
+      "median_ms": 57.7828089999457,
+      "samples_per_second": 2215.191719047793,
+      "within_process_quarter_span": 0.00047676253859485485,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_4",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1279066112,
+      "incremental_allocated_bytes": 1153361920,
+      "reserved_bytes": 3265265664,
+      "median_ms": 47.14954299998908,
+      "samples_per_second": 2714.7665036759668,
+      "within_process_quarter_span": 0.0022391038600340085,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_8",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2193865728,
+      "incremental_allocated_bytes": 2068161536,
+      "reserved_bytes": 6002049024,
+      "median_ms": 41.81103350003923,
+      "samples_per_second": 3061.392873722672,
+      "within_process_quarter_span": 0.0007695101460458709,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_16",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 4011931648,
+      "incremental_allocated_bytes": 3886227456,
+      "reserved_bytes": 6490685440,
+      "median_ms": 39.01022699994883,
+      "samples_per_second": 3281.1908528542504,
+      "within_process_quarter_span": 0.0013827304084159664,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_32",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 7377042432,
+      "incremental_allocated_bytes": 7251338240,
+      "reserved_bytes": 12176064512,
+      "median_ms": 37.699728500001584,
+      "samples_per_second": 3395.2499153938106,
+      "within_process_quarter_span": 0.0019161575186448232,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "apex_release_64",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 14432704000,
+      "incremental_allocated_bytes": 14306999808,
+      "reserved_bytes": 14501806080,
+      "median_ms": 37.158804999990025,
+      "samples_per_second": 3444.6748220249374,
+      "within_process_quarter_span": 0.002399943717690478,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_full_batch",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 22269747712,
+      "incremental_allocated_bytes": 22144043520,
+      "reserved_bytes": 24287117312,
+      "median_ms": 87.31209799998396,
+      "samples_per_second": 1466.0053180719985,
+      "within_process_quarter_span": 0.0015571066845510018,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_1",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 12539677184,
+      "incremental_allocated_bytes": 12413972992,
+      "reserved_bytes": 13843300352,
+      "median_ms": 313.06020400006673,
+      "samples_per_second": 408.8670433498239,
+      "within_process_quarter_span": 0.004605070082109863,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_2",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 13811540480,
+      "incremental_allocated_bytes": 13685836288,
+      "reserved_bytes": 15588130816,
+      "median_ms": 191.56785099994522,
+      "samples_per_second": 668.1705689752536,
+      "within_process_quarter_span": 0.007180578792177261,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_4",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 14895964672,
+      "incremental_allocated_bytes": 14770260480,
+      "reserved_bytes": 17033068544,
+      "median_ms": 130.3581419999773,
+      "samples_per_second": 981.9102822133065,
+      "within_process_quarter_span": 0.007182182652481162,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_8",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 15764995072,
+      "incremental_allocated_bytes": 15639290880,
+      "reserved_bytes": 17991467008,
+      "median_ms": 105.84357100003672,
+      "samples_per_second": 1209.3318355628383,
+      "within_process_quarter_span": 0.0026110031547246226,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_16",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 16608618496,
+      "incremental_allocated_bytes": 16482914304,
+      "reserved_bytes": 19256049664,
+      "median_ms": 95.58523199996216,
+      "samples_per_second": 1339.1189969602278,
+      "within_process_quarter_span": 0.0010470449064088339,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_32",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17533857792,
+      "incremental_allocated_bytes": 17408153600,
+      "reserved_bytes": 19935526912,
+      "median_ms": 90.91242900001362,
+      "samples_per_second": 1407.9483015461046,
+      "within_process_quarter_span": 0.010109399644693262,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_retain_64",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 19262932480,
+      "incremental_allocated_bytes": 19137228288,
+      "reserved_bytes": 20493369344,
+      "median_ms": 88.99277199998323,
+      "samples_per_second": 1438.3190580918651,
+      "within_process_quarter_span": 0.002517543907083253,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_1",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 537117696,
+      "incremental_allocated_bytes": 411413504,
+      "reserved_bytes": 664797184,
+      "median_ms": 324.6488379999164,
+      "samples_per_second": 394.27216431322313,
+      "within_process_quarter_span": 0.00734578858324797,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_2",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 691995136,
+      "incremental_allocated_bytes": 566290944,
+      "reserved_bytes": 962592768,
+      "median_ms": 186.907849000022,
+      "samples_per_second": 684.8294530423115,
+      "within_process_quarter_span": 0.005552143093586315,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_4",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1000676352,
+      "incremental_allocated_bytes": 874972160,
+      "reserved_bytes": 1564475392,
+      "median_ms": 127.40113999996083,
+      "samples_per_second": 1004.7005858820364,
+      "within_process_quarter_span": 0.006442450959835977,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_8",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1626718208,
+      "incremental_allocated_bytes": 1501014016,
+      "reserved_bytes": 2587885568,
+      "median_ms": 104.63928799993027,
+      "samples_per_second": 1223.2499135514502,
+      "within_process_quarter_span": 0.0026185644445795297,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_16",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3010639360,
+      "incremental_allocated_bytes": 2884935168,
+      "reserved_bytes": 4857004032,
+      "median_ms": 94.97846949994937,
+      "samples_per_second": 1347.6738535997174,
+      "within_process_quarter_span": 0.0017055950148969767,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_32",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 5779204608,
+      "incremental_allocated_bytes": 5653500416,
+      "reserved_bytes": 6335496192,
+      "median_ms": 90.6611199998224,
+      "samples_per_second": 1411.8510779510636,
+      "within_process_quarter_span": 0.010389591078628024,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "numba_release_64",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 11314501120,
+      "incremental_allocated_bytes": 11188796928,
+      "reserved_bytes": 12345933824,
+      "median_ms": 89.10584999989624,
+      "samples_per_second": 1436.4937880077352,
+      "within_process_quarter_span": 0.001846588053608711,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_full_batch",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 26359246848,
+      "incremental_allocated_bytes": 26233542656,
+      "reserved_bytes": 35611738112,
+      "median_ms": 205.76757099996712,
+      "samples_per_second": 622.0610924158717,
+      "within_process_quarter_span": 0.00045869503490991725,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_1",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17268694528,
+      "incremental_allocated_bytes": 17142990336,
+      "reserved_bytes": 18031312896,
+      "median_ms": 355.3986850000115,
+      "samples_per_second": 360.1589015446016,
+      "within_process_quarter_span": 0.0003350802757602356,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_2",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17365952512,
+      "incremental_allocated_bytes": 17240248320,
+      "reserved_bytes": 18362662912,
+      "median_ms": 221.15644349997865,
+      "samples_per_second": 578.7758112506108,
+      "within_process_quarter_span": 0.00032337020441364217,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_4",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17461151744,
+      "incremental_allocated_bytes": 17335447552,
+      "reserved_bytes": 18624806912,
+      "median_ms": 154.5307299999763,
+      "samples_per_second": 828.3142129725242,
+      "within_process_quarter_span": 0.0010359992331918644,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_8",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17691841024,
+      "incremental_allocated_bytes": 17566136832,
+      "reserved_bytes": 19216203776,
+      "median_ms": 148.12633949998144,
+      "samples_per_second": 864.127206762009,
+      "within_process_quarter_span": 0.0009442624575588532,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_16",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 18242905600,
+      "incremental_allocated_bytes": 18117201408,
+      "reserved_bytes": 20147339264,
+      "median_ms": 210.1841909999962,
+      "samples_per_second": 608.989664688922,
+      "within_process_quarter_span": 0.0023327672217585693,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_32",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 19429279744,
+      "incremental_allocated_bytes": 19303575552,
+      "reserved_bytes": 22252879872,
+      "median_ms": 203.01277900000514,
+      "samples_per_second": 630.5021813429624,
+      "within_process_quarter_span": 0.0016486314071371133,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_retain_64",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 21681584640,
+      "incremental_allocated_bytes": 21555880448,
+      "reserved_bytes": 27539800064,
+      "median_ms": 204.37228499997673,
+      "samples_per_second": 626.3080143181576,
+      "within_process_quarter_span": 0.0017860748766505008,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_1",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 633730048,
+      "incremental_allocated_bytes": 508025856,
+      "reserved_bytes": 882900992,
+      "median_ms": 355.47374200001514,
+      "samples_per_second": 360.0828552900387,
+      "within_process_quarter_span": 0.0029851827869471492,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_2",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 866859520,
+      "incremental_allocated_bytes": 741155328,
+      "reserved_bytes": 2321547264,
+      "median_ms": 222.49369199994362,
+      "samples_per_second": 575.2972088756226,
+      "within_process_quarter_span": 0.0009472078880845558,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_4",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1288583168,
+      "incremental_allocated_bytes": 1162878976,
+      "reserved_bytes": 3466592256,
+      "median_ms": 154.55609599996478,
+      "samples_per_second": 828.1782686852363,
+      "within_process_quarter_span": 0.0009254335808424052,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_8",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2085277184,
+      "incremental_allocated_bytes": 1959572992,
+      "reserved_bytes": 6442450944,
+      "median_ms": 148.4791899999891,
+      "samples_per_second": 862.0736683706949,
+      "within_process_quarter_span": 0.0005261531405547082,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_16",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3775485440,
+      "incremental_allocated_bytes": 3649781248,
+      "reserved_bytes": 7411335168,
+      "median_ms": 210.457243999997,
+      "samples_per_second": 608.1995447968607,
+      "within_process_quarter_span": 0.0025194020072571988,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_32",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 6927869440,
+      "incremental_allocated_bytes": 6802165248,
+      "reserved_bytes": 14013169664,
+      "median_ms": 203.33598000001984,
+      "samples_per_second": 629.5000029015401,
+      "within_process_quarter_span": 0.0008933162176369969,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "medium",
+      "config": {
+        "id": "optimized_release_64",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 13538787328,
+      "incremental_allocated_bytes": 13413083136,
+      "reserved_bytes": 18249416704,
+      "median_ms": 202.42591750002248,
+      "samples_per_second": 632.3300967623663,
+      "within_process_quarter_span": 0.0009988296823728593,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_tiled_25000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 25000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1623125504,
+      "incremental_allocated_bytes": 1332719104,
+      "reserved_bytes": 1996488704,
+      "median_ms": 3124.5604965000666,
+      "samples_per_second": 40.965761470574,
+      "within_process_quarter_span": 0.012653610705562368,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_tiled_50000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 50000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1654663680,
+      "incremental_allocated_bytes": 1364257280,
+      "reserved_bytes": 2090860544,
+      "median_ms": 1647.5930619999417,
+      "samples_per_second": 77.68908655431358,
+      "within_process_quarter_span": 0.00106266522632259,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_tiled_100000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 100000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1718256128,
+      "incremental_allocated_bytes": 1427849728,
+      "reserved_bytes": 2229272576,
+      "median_ms": 1135.654278000061,
+      "samples_per_second": 112.7103577907652,
+      "within_process_quarter_span": 0.0006478216126868386,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_tiled_200000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 200000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 1852075008,
+      "incremental_allocated_bytes": 1561668608,
+      "reserved_bytes": 2506096640,
+      "median_ms": 925.9128209998835,
+      "samples_per_second": 138.24195658266635,
+      "within_process_quarter_span": 0.001122577696600624,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_tiled_400000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 400000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 2772006912,
+      "incremental_allocated_bytes": 2481600512,
+      "reserved_bytes": 3938451456,
+      "median_ms": 830.1018279998971,
+      "samples_per_second": 154.19794979660722,
+      "within_process_quarter_span": 0.0005589890731605429,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_tiled_800000",
+        "family": "flash_tiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": 800000,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 4575887872,
+      "incremental_allocated_bytes": 4285481472,
+      "reserved_bytes": 7656701952,
+      "median_ms": 782.3688019999508,
+      "samples_per_second": 163.60570573979513,
+      "within_process_quarter_span": 0.0006529416822134149,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_full_batch",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_1",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_2",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_4",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_8",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_16",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_32",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_retain_64",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_1",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 2793637376,
+      "incremental_allocated_bytes": 2503230976,
+      "reserved_bytes": 7677673472,
+      "median_ms": 715.3718960000788,
+      "samples_per_second": 178.9279124825808,
+      "within_process_quarter_span": 0.0004594391894163774,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_2",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 4471165440,
+      "incremental_allocated_bytes": 4180759040,
+      "reserved_bytes": 8308916224,
+      "median_ms": 590.9978890000502,
+      "samples_per_second": 216.5828379126226,
+      "within_process_quarter_span": 0.0009723831311447828,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_4",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 7765198336,
+      "incremental_allocated_bytes": 7474791936,
+      "reserved_bytes": 17368612864,
+      "median_ms": 526.7847255000788,
+      "samples_per_second": 242.98350693158216,
+      "within_process_quarter_span": 0.0004053793341118883,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_8",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 13477849088,
+      "incremental_allocated_bytes": 13187442688,
+      "reserved_bytes": 32763805696,
+      "median_ms": 495.06469450011537,
+      "samples_per_second": 258.55206687531256,
+      "within_process_quarter_span": 0.0013766553222276379,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_16",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 25480044032,
+      "incremental_allocated_bytes": 25189637632,
+      "reserved_bytes": 53605302272,
+      "median_ms": 488.0999025000392,
+      "samples_per_second": 262.2413963706738,
+      "within_process_quarter_span": 0.003243064180337596,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_32",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "complete",
+      "allocated_bytes": 48735364608,
+      "incremental_allocated_bytes": 48444958208,
+      "reserved_bytes": 77496057856,
+      "median_ms": 492.9894344999184,
+      "samples_per_second": 259.640452801674,
+      "within_process_quarter_span": 0.004714828546042549,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "flash_untiled_release_64",
+        "family": "flash_untiled",
+        "backend": "flash",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1,
+        "joint": "specialized",
+        "normalization": "specialized",
+        "tiled": false,
+        "whole_graph": false
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_full_batch",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_1",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_2",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_4",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_8",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_16",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_32",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_retain_64",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_1",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 5622401024,
+      "incremental_allocated_bytes": 5331994624,
+      "reserved_bytes": 23574085632,
+      "median_ms": 798.7164100000541,
+      "samples_per_second": 160.257130562763,
+      "within_process_quarter_span": 0.0003919486387187199,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_2",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 9604877312,
+      "incremental_allocated_bytes": 9314470912,
+      "reserved_bytes": 21242052608,
+      "median_ms": 724.0707034999332,
+      "samples_per_second": 176.77831651147838,
+      "within_process_quarter_span": 0.0005294182731105934,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_4",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 18306084352,
+      "incremental_allocated_bytes": 18015677952,
+      "reserved_bytes": 50595889152,
+      "median_ms": 686.415532500007,
+      "samples_per_second": 186.47596672792176,
+      "within_process_quarter_span": 0.0016329533065726487,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_8",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 33463828480,
+      "incremental_allocated_bytes": 33173422080,
+      "reserved_bytes": 38730203136,
+      "median_ms": 665.9592620000012,
+      "samples_per_second": 192.20394895566415,
+      "within_process_quarter_span": 0.0008518125377987573,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_16",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 65168187392,
+      "incremental_allocated_bytes": 64877780992,
+      "reserved_bytes": 76162269184,
+      "median_ms": 657.6558319999322,
+      "samples_per_second": 194.63067728108157,
+      "within_process_quarter_span": 0.0015165763286377754,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_32",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "apex_release_64",
+        "family": "apex",
+        "backend": "apex",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_full_batch",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_1",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_2",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_4",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_8",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_16",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_32",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_retain_64",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_1",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 3670468096,
+      "incremental_allocated_bytes": 3380061696,
+      "reserved_bytes": 12830375936,
+      "median_ms": 1739.9257625000928,
+      "samples_per_second": 73.56635711633885,
+      "within_process_quarter_span": 0.0016894474237336699,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_2",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 6627892224,
+      "incremental_allocated_bytes": 6337485824,
+      "reserved_bytes": 25555894272,
+      "median_ms": 1549.6198214999595,
+      "samples_per_second": 82.60090521822443,
+      "within_process_quarter_span": 0.0017400936770504138,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_4",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 12533825024,
+      "incremental_allocated_bytes": 12243418624,
+      "reserved_bytes": 50306482176,
+      "median_ms": 1462.7652330000274,
+      "samples_per_second": 87.50549788326668,
+      "within_process_quarter_span": 0.007699016818865756,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_8",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 24333271552,
+      "incremental_allocated_bytes": 24042865152,
+      "reserved_bytes": 42857398272,
+      "median_ms": 1426.6115509999509,
+      "samples_per_second": 89.72309239349795,
+      "within_process_quarter_span": 0.0009792811639917076,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_16",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 48092006400,
+      "incremental_allocated_bytes": 47801600000,
+      "reserved_bytes": 63216549888,
+      "median_ms": 1445.4468525000266,
+      "samples_per_second": 88.55393041855038,
+      "within_process_quarter_span": 0.002604857444601816,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_32",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "numba_release_64",
+        "family": "numba",
+        "backend": "numba",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_full_batch",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "full_batch",
+        "sub_batch": null,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_1",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_2",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_4",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_8",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_16",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_32",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_retain_64",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "retain",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_1",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 1,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 5315558912,
+      "incremental_allocated_bytes": 5025152512,
+      "reserved_bytes": 24224202752,
+      "median_ms": 3861.2148509999997,
+      "samples_per_second": 33.15018846124292,
+      "within_process_quarter_span": 0.001567338666186302,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_2",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 2,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 9049575936,
+      "incremental_allocated_bytes": 8759169536,
+      "reserved_bytes": 22592618496,
+      "median_ms": 3631.6306534999967,
+      "samples_per_second": 35.24587498363567,
+      "within_process_quarter_span": 0.000598493032281544,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_4",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 4,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 17202308608,
+      "incremental_allocated_bytes": 16911902208,
+      "reserved_bytes": 54825844736,
+      "median_ms": 3498.488459499981,
+      "samples_per_second": 36.58722945117112,
+      "within_process_quarter_span": 0.0007698750439324442,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_8",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 8,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 31406665728,
+      "incremental_allocated_bytes": 31116259328,
+      "reserved_bytes": 42041606144,
+      "median_ms": 3468.4695884999996,
+      "samples_per_second": 36.90388418696092,
+      "within_process_quarter_span": 0.00012999594217588673,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_16",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 16,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "complete",
+      "allocated_bytes": 61117474304,
+      "incremental_allocated_bytes": 60827067904,
+      "reserved_bytes": 82827018240,
+      "median_ms": 3469.893481999975,
+      "samples_per_second": 36.88874043655756,
+      "within_process_quarter_span": 0.0006229301831202072,
+      "timing_quality": {
+        "status": "stable_timing",
+        "timing_warnings": []
+      }
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_32",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 32,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    },
+    {
+      "workload": "long",
+      "config": {
+        "id": "optimized_release_64",
+        "family": "optimized",
+        "backend": "optimized",
+        "schedule": "release",
+        "sub_batch": 64,
+        "tile_rows": null,
+        "dropout_p": 0.1
+      },
+      "status": "oom",
+      "oom_process_records": 2
+    }
+  ],
+  "manifest_sha256": "b3ce5ad3ba90384287a12692b100a045d5876d15c3b39ea7b17d2378c3dc711c"
+}

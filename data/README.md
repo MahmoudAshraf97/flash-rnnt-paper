@@ -65,7 +65,8 @@ Encoder lengths are `ceil(duration_s / 0.08)`. Valid positions are
 Selection uses source row order and the fixed random seed. Changing the source,
 revision or tokenizer can change the selected batches; it does not regenerate
 measurements for them. The workload file is also recorded in
-the published comparison and ablation manifests under `results/raw/`.
+the published comparison and ablation manifests under each GPU campaign's
+`raw/` folder in `results/`.
 
 ## Tokenizer
 

@@ -1,0 +1,31 @@
+workload,execution,components,samples_per_second,peak_memory_gib,status
+short,Untiled,Compiled,22743.336824673257,2.7962117195129395,ok
+short,Untiled,Specialized joint,21740.716310662374,2.5823044776916504,ok
+short,Untiled,Specialized normalization,26563.657782514234,1.648036003112793,ok
+short,Untiled,Both specialized,25333.426486007564,1.4356880187988281,ok
+short,Tiled,Compiled,17523.69395116036,1.497222900390625,ok
+short,Tiled,Specialized joint,16954.49684564943,1.3533220291137695,ok
+short,Tiled,Specialized normalization,19879.080831835898,0.8566551208496094,ok
+short,Tiled,Both specialized,19135.059434869585,0.712287425994873,ok
+short,Untiled,Whole-graph compilation,22524.046399204133,2.2591352462768555,ok
+short,Tiled,Whole-graph compilation,17783.824278082655,1.2286725044250488,ok
+medium,Untiled,Compiled,3176.9929320111933,21.965938568115234,ok
+medium,Untiled,Specialized joint,3204.9660949532313,20.43850088119507,ok
+medium,Untiled,Specialized normalization,3877.9032468138926,11.795135021209717,ok
+medium,Untiled,Both specialized,3851.76123736245,10.26769733428955,ok
+medium,Tiled,Compiled,2448.4707143642286,2.1636319160461426,ok
+medium,Tiled,Specialized joint,2357.4337995952965,1.8886914253234863,ok
+medium,Tiled,Specialized normalization,2833.7384232607465,1.29435396194458,ok
+medium,Tiled,Both specialized,2710.719127949842,1.019667625427246,ok
+medium,Untiled,Whole-graph compilation,3230.4336733551654,17.596364974975586,ok
+medium,Tiled,Whole-graph compilation,2504.283474171061,1.7993359565734863,ok
+long,Untiled,Compiled,,,OOM
+long,Untiled,Specialized joint,,,OOM
+long,Untiled,Specialized normalization,,,OOM
+long,Untiled,Both specialized,,,OOM
+long,Tiled,Compiled,124.21002707830449,3.4886183738708496,ok
+long,Tiled,Specialized joint,121.67202921164932,2.629981517791748,ok
+long,Tiled,Specialized normalization,141.4268764400907,2.5830583572387695,ok
+long,Tiled,Both specialized,137.83266859472192,1.724879264831543,ok
+long,Untiled,Whole-graph compilation,,,OOM
+long,Tiled,Whole-graph compilation,126.97329967609473,3.1090188026428223,ok

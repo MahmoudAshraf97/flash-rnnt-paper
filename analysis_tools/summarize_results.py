@@ -219,7 +219,8 @@ def summary_text(comparison, ablation, comparison_manifest, ablation_manifest):
         "throughput, peak allocated memory and status. `full batch` means one backward "
         "pass without sub-batching; tile rows apply only to tiled Flash.",
         "",
-        "Run `make results` to check the records and regenerate these tables and CSVs. "
+        "Run `make results RESULTS=<campaign-folder>` from the repository root "
+        "to check the records and regenerate these tables and CSVs. "
         "Manifests, summaries and worker records, including timing warnings, are under "
         "`raw/comparison/` and `raw/ablation/`.",
         "",
@@ -257,10 +258,10 @@ def summarize(comparison_folder, ablation_folder, output):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--comparison", type=Path, default=ROOT / "results/raw/comparison"
+        "--comparison", type=Path, default=ROOT / "results/local/raw/comparison"
     )
-    parser.add_argument("--ablation", type=Path, default=ROOT / "results/raw/ablation")
-    parser.add_argument("--output", type=Path, default=ROOT / "results")
+    parser.add_argument("--ablation", type=Path, default=ROOT / "results/local/raw/ablation")
+    parser.add_argument("--output", type=Path, default=ROOT / "results/local")
     args = parser.parse_args()
     summarize(args.comparison, args.ablation, args.output)
 

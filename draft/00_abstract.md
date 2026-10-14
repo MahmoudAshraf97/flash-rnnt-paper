@@ -2,14 +2,16 @@
 
 The recurrent neural network transducer (RNN-T) remains a practical choice for
 streaming speech recognition, but training requires large intermediate tensors.
-We present Flash RNN-T, a joint and loss implementation using specialized kernels
-over the full alignment space and vocabulary. Its tiled variant recomputes
-intermediates for groups of alignment positions during backward.
-In joint-and-loss benchmarks with one backward call per batch, tiled Flash reduces
-peak allocated memory 5.1-13.8-fold on short and medium workloads versus the fastest
-evaluated baseline, with throughput 0.3-2.7% higher. We select each
-implementation's lowest-memory configuration within 5% of its peak measured
-throughput. On the long workload, tiled Flash fits within 32 GB while all tested
-baseline configurations using the same backward schedule run out of memory.
-Its untiled variant avoids recomputation and achieves the highest measured
-throughput among evaluated implementations on all three workloads.
+We present Flash RNN-T, a joint and loss implementation combining specialized
+kernels with optional tiled recomputation over the full alignment space and
+vocabulary.
+Tiled and untiled Flash form the entire measured throughput-memory frontier
+on medium and long workloads. On H100, untiled Flash achieves 24-39% higher
+throughput with 26-56% less memory than the fastest baseline on these workloads
+wherever it fits. Tiling reduces memory further through recomputation.
+On medium, tiled Flash uses ninefold less memory than that baseline at 16%
+lower throughput when both use one backward call per batch.
+On long, it fits where all tested alternatives with that backward schedule
+run out of memory with 80 GB.
+These comparisons use each implementation's lowest-memory configuration
+reaching at least 95% of its peak throughput.

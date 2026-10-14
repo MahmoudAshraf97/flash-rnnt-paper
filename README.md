@@ -44,7 +44,7 @@ outputs and resuming runs.
 | `analysis_tools/` | Paper generation, layout checks and figure rendering |
 | [benchmarks/](benchmarks/README.md) | Benchmark harness, dependency pins, patches and build instructions |
 | [data/](data/README.md) | Paired workload lengths, selection instructions and tokenizer |
-| [results/](results/README.md) | Readable result tables, two compact CSVs, and raw evidence in a subdirectory |
+| [results/](results/README.md) | Separate H100 and RTX 5090 tables, CSVs and raw evidence |
 
 ## Reproduce the paper
 
@@ -54,16 +54,21 @@ start from the supplied files.
 ```bash
 make build-tokenizer   # data/tokenizer/tokenizer.model from public transcripts (~180 MB download)
 make workloads         # data/workloads/workloads.json from Granary and TED-LIUM metadata (hours, CPU)
-make benchmarks        # results/raw/ measurements (GPU)
-make results figures   # results/ tables and CSVs, draft/figures/
+make benchmarks        # results/local/raw/ measurements (GPU)
+make results           # results/local/ tables and CSVs from the local run
+make figures           # paper figures; comparison uses the supplied H100 results
 make paper check       # build/paper/main.pdf and layout checks
 ```
 
 `make benchmarks` needs an NVIDIA GPU, the CUDA 13.0 toolkit and a C++ compiler;
 see [benchmarks/README.md](benchmarks/README.md). It replaces the records in
-`results/raw/` unless they belong to a local run with matching environment,
+`results/local/raw/` unless they belong to a local run with matching environment,
 settings, workloads and sources, in which case it resumes them. The numbers
-quoted in `draft/*.md` come from `results/README.md`.
+quoted in `draft/*.md` use the H100 campaign in
+`results/h100-20261013/`, with `results/rtx5090/` preserving the RTX 5090 cross-check.
+The paper comparison figure defaults to the H100 campaign. To plot a local
+rerun separately, use `uv run --locked python -m analysis_tools.plot_frontiers
+--source results/local/raw/comparison --output build/figures/local`.
 The implementation is pinned to NeMo commit
 `c0188115c167f027b14ad550c968e9ff83ba8f7f`.
 

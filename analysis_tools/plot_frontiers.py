@@ -8,7 +8,7 @@ from pathlib import Path
 from .summarize_results import IMPLEMENTATIONS as LABELS, WORKLOADS, in_panel
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "results/raw/comparison"
+SOURCE = ROOT / "results/h100-20261013/raw/comparison"
 OUT = ROOT / "draft/figures/frontiers"
 FAMILIES = ("flash_tiled", "flash_untiled", "apex", "optimized", "numba")
 STYLES = {
@@ -62,7 +62,7 @@ def main(source=SOURCE, out=OUT):
     points = plotted_points(cells, batch)
 
     out.mkdir(parents=True, exist_ok=True)
-    width, height = 170, 132
+    width, height = 170, 106
     with plt.rc_context(
         {
             "font.family": "DejaVu Serif",
@@ -87,7 +87,7 @@ def main(source=SOURCE, out=OUT):
                 ls="--" if b == "flash_tiled" else "-",
                 lw=1.2,
                 markersize=3.5,
-                label=LABELS[b].replace(" (", "\n("),
+                label=LABELS[b],
             )
             for b in FAMILIES
         ]
@@ -105,7 +105,7 @@ def main(source=SOURCE, out=OUT):
         for col, schedule in enumerate(("retain", "release")):
             fig.text(
                 (46 + 90 * col) / width,
-                120 / height,
+                94 / height,
                 schedule.title(),
                 ha="center",
                 fontweight="bold",
@@ -115,9 +115,9 @@ def main(source=SOURCE, out=OUT):
                 ax = fig.add_axes(
                     [
                         (14 + col * 90) / width,
-                        (88 - row_index * 33) / height,
+                        (67 - row_index * 28) / height,
                         64 / width,
-                        27 / height,
+                        22 / height,
                     ]
                 )
                 paired = [r for r in points if r["workload"] == name]
@@ -206,7 +206,7 @@ def main(source=SOURCE, out=OUT):
                     )
             fig.text(
                 (46 + 90 * col) / width,
-                10.5 / height,
+                0.5 / height,
                 "Peak allocated memory (GiB, log scale)",
                 ha="center",
                 va="bottom",
@@ -214,7 +214,7 @@ def main(source=SOURCE, out=OUT):
             )
         fig.text(
             1.5 / width,
-            68 / height,
+            55 / height,
             "Throughput (samples/s)",
             rotation=90,
             ha="left",

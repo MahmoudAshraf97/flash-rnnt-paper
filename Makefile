@@ -1,4 +1,5 @@
 UV ?= uv
+RESULTS ?= results/local
 PYTHON ?= $(UV) run --locked python
 TEX ?= pdflatex
 FIGURE_TEX ?= $(if $(filter tectonic,$(TEX)),tectonic,xelatex)
@@ -39,7 +40,7 @@ endif
 	cp build/figures/$*.pdf $@
 
 results:
-	$(PYTHON) analysis_tools/summarize_results.py
+	$(PYTHON) analysis_tools/summarize_results.py --comparison $(RESULTS)/raw/comparison --ablation $(RESULTS)/raw/ablation --output $(RESULTS)
 
 build-tokenizer:
 	$(UV) run --locked --group data python -m analysis_tools.train_tokenizer

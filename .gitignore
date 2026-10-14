@@ -8,7 +8,8 @@
 
 # Rebuildable outputs and caches (committed figure PDFs are sources for LaTeX).
 /build/
-results/raw/*/coordinator.lock
+results/**/coordinator.lock
+/results/local/
 /dist/
 __pycache__/
 *.py[cod]
