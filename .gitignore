@@ -6,7 +6,7 @@
 .env.*
 !*.example
 
-# Rebuildable outputs and caches (committed figure PDFs are sources for LaTeX).
+# Rebuildable outputs and caches.
 /build/
 results/**/coordinator.lock
 /results/local/
@@ -27,9 +27,10 @@ venv/
 *.synctex.gz
 .DS_Store
 
-# Temporary: pipeline outputs, left out to test a from-scratch reproduction.
+# Generated tokenizer and workload data.
 /data/tokenizer/tokenizer.model
 /data/workloads/
 
 /draft/figures/**/*.pdf
 /draft/figures/**/*.svg
+/draft/figures/**/*.pgf

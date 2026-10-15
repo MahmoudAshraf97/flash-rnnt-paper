@@ -27,7 +27,7 @@ tiled Flash preserves one backward call per batch. When release scheduling
 is used, untiled Flash achieves 39% higher throughput than Apex with 26%
 less memory.
 
-![Throughput and memory for the B128 projected-input comparison](figures/frontiers/frontiers.svg)
+![Six H100 throughput versus peak-memory panels compare tiled Flash, untiled Flash, Apex, Optimized Transducer and Numba. Rows show short, medium and long workloads; columns show retain and release scheduling. Flash configurations form the medium and long frontiers. Only tiled Flash fits the long retain workload. Apex reaches the highest short-workload throughput.](figures/frontiers/frontiers.svg)
 
 *Throughput–memory tradeoffs under retain and release scheduling. Points
 correspond to tile limits for tiled Flash and sub-batch sizes for the

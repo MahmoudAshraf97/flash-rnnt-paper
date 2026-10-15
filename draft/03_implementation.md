@@ -12,7 +12,7 @@ lengths of utterance $b$. We pack the $N=\sum_{b=1}^{B}T_b(U_b+1)$ valid alignme
 positions into approximately balanced tiles of at most $R$ positions, which may
 span utterance boundaries (Figure 1).
 
-![Packing valid alignment positions into tiles](figures/tiling/packing.svg)
+![Seventeen valid alignment positions from two utterances are packed consecutively and divided into tiles of six, six and five positions. The middle tile crosses the utterance boundary.](figures/tiling/packing.svg)
 
 *Figure 1. Packing two utterances into tiles with an illustrative limit of $R=6$
 alignment positions.*
@@ -24,7 +24,7 @@ joint backpropagation must wait until this computation is complete. Each tile is
 then recomputed and differentiated in turn, releasing its hidden states and
 logits before processing the next tile (Figure 2).
 
-![Tensor flow with separate hidden states and logits inside a dashed enclosure](figures/checkpoint/execution.svg)
+![Projected states produce hidden states, logits, transition log probabilities and loss. Forward values flow downward and gradients flow upward. Hidden states and logits inside the dashed enclosure are discarded during forward and recomputed during backward; projected states and transition log probabilities are checkpoint inputs and outputs.](figures/checkpoint/execution.svg)
 
 *Figure 2. Dashed enclosure marks intermediates discarded after each tile's
 forward computation and recomputed during backward. Outputs from all tiles feed

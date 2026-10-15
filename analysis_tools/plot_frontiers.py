@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 from .summarize_results import IMPLEMENTATIONS as LABELS, WORKLOADS, in_panel
@@ -37,6 +38,61 @@ def plotted_points(cells, batch):
             if in_panel(row, schedule):
                 result.append(dict(row, panel_schedule=schedule))
     return result
+
+
+def inline_pgf(path):
+    """Prepare the pgf export for \\input into the paper and arXiv's HTML.
+
+    The pgf backend writes dash lengths in TeX points but means PostScript
+    points (line widths are already converted). Each text gets a LaTeX size
+    command, which LaTeXML honours where it ignores \\fontsize, followed by a
+    DejaVu Serif font primitive at the exact size for pdfLaTeX. The font loads
+    are skipped under LaTeXML (\\iflatexml from the paper's preamble), which has
+    no metrics for them and renders picture text in the page font anyway.
+    """
+    text = path.read_text()
+
+    def dash(m):
+        lengths = re.sub(
+            r"([0-9.]+)pt", lambda n: f"{float(n[1]) * 72.27 / 72:f}pt", m[1]
+        )
+        return f"\\pgfsetdash{{{lengths}}}{{{float(m[2]) * 72.27 / 72:f}pt}}"
+
+    text = re.sub(r"\\pgfsetdash\{((?:\{[0-9.]+pt\})+)\}\{([0-9.]+)pt\}", dash, text)
+    fonts = {}
+
+    def font(m):
+        size, bold = float(m[1]), bool(m[2])
+        name = fonts.setdefault((size, bold), "\\pgfdejavu" + "ABCDEFGHIJ"[len(fonts)])
+        command = (
+            "\\scriptsize"
+            if size <= 7.5
+            else "\\footnotesize"
+            if size <= 8
+            else "\\small"
+            if size <= 9
+            else "\\normalsize"
+        )
+        return command + ("\\bfseries" if bold else "") + name
+
+    text = re.sub(
+        r"\\fontfamily\{\\familydefault\}\\fontsize\{([0-9.]+)\}\{[0-9.]+\}"
+        r"(\\bfseries)?\\selectfont",
+        font,
+        text,
+    )
+    definitions = (
+        "\\iflatexml\n"
+        + "".join(f"\\let{name}\\relax%\n" for name in fonts.values())
+        + "\\else\n"
+        + "".join(
+            f"\\font{name}=DejaVuSerif{'-Bold' if bold else ''}-tlf-t1 at {size:g}bp%\n"
+            for (size, bold), name in fonts.items()
+        )
+        + "\\fi\n"
+    )
+    assert fonts and text.count("\\begingroup%\n") == 1
+    path.write_text(text.replace("\\begingroup%\n", "\\begingroup%\n" + definitions))
 
 
 def main(source=SOURCE, out=OUT):
@@ -75,6 +131,9 @@ def main(source=SOURCE, out=OUT):
             "ps.fonttype": 42,
             "svg.fonttype": "none",
             "savefig.dpi": 240,
+            "pgf.texsystem": "pdflatex",
+            "pgf.rcfonts": False,
+            "pgf.preamble": r"\usepackage[T1]{fontenc}\usepackage{DejaVuSerif}",
         }
     ):
         fig = plt.figure(figsize=(width / 25.4, height / 25.4))
@@ -192,7 +251,6 @@ def main(source=SOURCE, out=OUT):
                     transform=ax.transAxes,
                     va="top",
                     fontsize=9,
-                    bbox=dict(facecolor="white", edgecolor="none", alpha=0.85, pad=0.4),
                 )
                 if absent:
                     ax.text(
@@ -225,6 +283,8 @@ def main(source=SOURCE, out=OUT):
             fig.savefig(
                 (generated if extension == "png" else out) / f"frontiers.{extension}"
             )
+        fig.savefig(out / "frontiers.pgf", transparent=True)
+        inline_pgf(out / "frontiers.pgf")
         plt.close(fig)
 
     print(f"{out / 'frontiers.pdf'}: {len(points)} plotted points")

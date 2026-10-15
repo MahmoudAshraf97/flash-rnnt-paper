@@ -1,4 +1,4 @@
-# Flash RNN-T: Memory-Efficient Joint and Loss Computation
+# Flash RNN-T: Memory-Efficient Joint Network and Transducer Loss Computation
 
 Working manuscript, split for section-by-section editing. Read in this order:
 

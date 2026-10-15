@@ -1,0 +1,6 @@
+% Stand-in for LaTeXML's latexml.sty: defines the \iflatexml switch as false
+% under pdfLaTeX. LaTeXML ignores this file, uses its own binding for the
+% package and sets the switch to true, so figure sources can skip the TeX
+% font loads that LaTeXML cannot resolve.
+\ProvidesPackage{latexml}[2026/10/15 iflatexml stand-in for pdfLaTeX]
+\newif\iflatexml\latexmlfalse

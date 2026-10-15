@@ -1,13 +1,12 @@
 UV ?= uv
 RESULTS ?= results/local
 PYTHON ?= $(UV) run --locked python
-TEX ?= pdflatex
-FIGURE_TEX ?= $(if $(filter tectonic,$(TEX)),tectonic,xelatex)
+TEX = pdflatex
 METHOD_PDFS = draft/figures/tiling/packing.pdf draft/figures/checkpoint/execution.pdf
 
-.PHONY: paper check benchmarks figures method-figures results build-tokenizer workloads source-archive
+.PHONY: paper arxiv check benchmarks figures frontier-figures method-figures results build-tokenizer workloads source-archive
 
-paper:
+paper: frontier-figures
 	$(PYTHON) analysis_tools/generate_paper.py
 ifeq ($(TEX),tectonic)
 	cd build/paper && tectonic --keep-logs --keep-intermediates main.tex
@@ -18,24 +17,33 @@ else
 	cd build/paper && pdflatex -interaction=nonstopmode -halt-on-error main.tex
 endif
 
+arxiv: frontier-figures
+	$(PYTHON) analysis_tools/generate_paper.py --target arxiv
+	cd build/arxiv && pdflatex -interaction=nonstopmode -halt-on-error main.tex
+	cd build/arxiv && bibtex main
+	cd build/arxiv && pdflatex -interaction=nonstopmode -halt-on-error main.tex
+	cd build/arxiv && pdflatex -interaction=nonstopmode -halt-on-error main.tex
+
 check:
 	$(PYTHON) analysis_tools/check_paper.py
 
 benchmarks:
 	cd benchmarks && $(UV) run --locked python -m harness run
 
-figures: method-figures
+figures: method-figures frontier-figures
+
+frontier-figures:
 	$(PYTHON) -m analysis_tools.plot_frontiers
 
 method-figures: $(METHOD_PDFS)
 	$(PYTHON) analysis_tools/export_figure_previews.py $(METHOD_PDFS)
 
-draft/figures/%.pdf: draft/figures/%.tex
+draft/figures/%.pdf: draft/figures/%.tex draft/figures/%-body.tex
 	mkdir -p build/figures/$(dir $*)
-ifeq ($(FIGURE_TEX),tectonic)
-	tectonic --keep-logs -o build/figures/$(dir $*) $<
+ifeq ($(TEX),tectonic)
+	cd $(dir $<) && tectonic --keep-logs -o $(CURDIR)/build/figures/$(dir $*) $(notdir $<)
 else
-	$(FIGURE_TEX) -interaction=nonstopmode -halt-on-error -output-directory=build/figures/$(dir $*) $<
+	cd $(dir $<) && $(TEX) -interaction=nonstopmode -halt-on-error -output-directory=$(CURDIR)/build/figures/$(dir $*) $(notdir $<)
 endif
 	cp build/figures/$*.pdf $@
 
