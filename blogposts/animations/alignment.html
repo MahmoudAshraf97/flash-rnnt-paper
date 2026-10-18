@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Same words, different possible timings</title>
+  <style>
+    :root { color-scheme:light dark; --bg:#fafaf8; --ink:#233b3a; --muted:#627472; --line:#c9d6d1; --accent:#087f78; --chip:#e0f0eb; }
+    @media(prefers-color-scheme:dark) { :root { --bg:#172321; --ink:#e6eeeb; --muted:#a9bdb7; --line:#456157; --accent:#60d3bc; --chip:#25473d; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,sans-serif; }
+    figure { max-width:760px; margin:0 auto; padding:22px 20px 14px; }
+    svg { display:block; width:100%; height:auto; }
+    svg text { font-family:inherit; fill:var(--ink); }
+    .muted { fill:var(--muted); }
+    .word { animation:timing 4s ease-in-out infinite; }
+    .hello { --start:220px; --end:280px; }
+    .there { --start:475px; --end:535px; }
+    @keyframes timing {
+      0%,35%,100% { transform:translateX(var(--start)); }
+      50%,85% { transform:translateX(var(--end)); }
+    }
+    figcaption { display:flex; justify-content:center; align-items:center; gap:16px; margin-top:4px; text-align:center; }
+    button { background:none; color:var(--muted); border:1px solid var(--line); border-radius:6px; padding:3px 9px; font:13px system-ui,sans-serif; cursor:pointer; }
+    button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    @media(prefers-reduced-motion:reduce) { .word { animation-play-state:paused; } }
+  </style>
+</head>
+<body>
+<figure id="animation">
+  <svg viewBox="0 0 700 215" role="img" aria-labelledby="title description">
+    <title id="title">Same words, different possible timings</title>
+    <desc id="description">A fixed illustrative audio waveform. The words hello and there shift between two candidate timings while keeping their order. The animation repeats every four seconds.</desc>
+    <text x="350" y="25" text-anchor="middle" font-size="21" font-weight="600">Same words. Different possible timings.</text>
+    <path d="M65 96 H635" stroke="var(--line)" stroke-width="1.5"/>
+    <g id="wave" stroke="var(--muted)" stroke-width="3" stroke-linecap="round"></g>
+    <text x="65" y="144" font-size="13" class="muted">Audio start</text>
+    <text x="635" y="144" text-anchor="end" font-size="13" class="muted">Audio end</text>
+    <g class="word hello">
+      <path d="M0 130 V167" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 4"/>
+      <rect x="-42" y="168" width="84" height="35" rx="8" fill="var(--chip)"/>
+      <text x="0" y="192" text-anchor="middle" font-size="21">hello</text>
+    </g>
+    <g class="word there">
+      <path d="M0 130 V167" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 4"/>
+      <rect x="-42" y="168" width="84" height="35" rx="8" fill="var(--chip)"/>
+      <text x="0" y="192" text-anchor="middle" font-size="21">there</text>
+    </g>
+  </svg>
+  <figcaption>
+    <span>Each placement is a possible alignment.</span>
+    <button id="pause" type="button" aria-label="Pause alignment animation">Pause</button>
+  </figcaption>
+</figure>
+<script>
+  // Schematic waveform: not a recording or measured token timestamps.
+  const wave=document.getElementById('wave');
+  for(let i=0;i<=95;i++) {
+    const t=i/95;
+    const envelope=Math.exp(-(((t-.3)/.15)**2))+.8*Math.exp(-(((t-.75)/.14)**2));
+    const amplitude=2+27*envelope*(.3+.7*Math.abs(Math.sin(i*1.7)));
+    const bar=document.createElementNS('http://www.w3.org/2000/svg','path');
+    bar.setAttribute('d','M'+(65+i*6)+' '+(96-amplitude)+' V'+(96+amplitude));
+    wave.append(bar);
+  }
+  const button=document.getElementById('pause');
+  let paused=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function update() {
+    document.querySelectorAll('.word').forEach(word=>word.style.animationPlayState=paused?'paused':'running');
+    button.textContent=paused?'Play':'Pause';
+    button.setAttribute('aria-label',(paused?'Play':'Pause')+' alignment animation');
+  }
+  button.onclick=()=>{paused=!paused;update();};
+  update();
+</script>
+</body>
+</html>
