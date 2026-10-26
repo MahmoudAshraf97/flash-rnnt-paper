@@ -13,11 +13,11 @@ describes one possible alignment. The training calculation combines the
 probabilities of all valid paths to measure how well the model explains the
 transcript. That measure is called the loss.
 
-[Animation: the same transcript, different possible timings.](animations/alignment.html)
+[The same transcript, different possible timings.](animations/alignment.html)
 
 At each position, a part of the model called the joint network combines what
 the model has heard with the text it has already accounted for. It produces
-scores for every possible next token—a word or word fragment in the model's
+scores for every possible next token - a word or word fragment in the model's
 vocabulary. But speech unfolds over many audio steps, and each step does not
 necessarily produce a new token. The model therefore also scores a special
 **blank** token: “advance to the next audio step without adding text.” Blank can

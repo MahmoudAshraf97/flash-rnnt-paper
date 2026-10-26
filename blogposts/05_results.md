@@ -1,7 +1,7 @@
 ## What changed in practice
 
-Together, these changes make the full model cheaper to train. Switching our
-NeMo training setup to tiled Flash reduced training-step time by **22%** and
+Together, these changes make the full model cheaper to train. Switching from
+NeMo’s Numba-based RNN-T loss to tiled Flash reduced training-step time by **22%** and
 peak GPU memory by **46%**. We measured this with a 114-million-parameter speech
 recognition model on eight H100 GPUs, keeping the model, data and batch size
 the same.

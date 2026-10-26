@@ -13,7 +13,7 @@ absolute dollar estimates await a chosen GPU rate.
 3. [Compute it, use it, make room](03_tiled_recomputation.md) — explain what we retain, what we discard, and why recreating temporary data saves memory at a computational cost.
 4. [Making each operation more efficient](04_specialized_operations.md) — explain specialization and why untiled Flash is useful when memory permits.
 5. [What changed in practice](05_results.md) — report training-step time and memory savings, then project the time and relative compute cost of 30,000 steps.
-6. [What this makes possible](06_conclusion.md) — explain the practical implications and link to the paper and code.
+6. [What this unlocks](06_conclusion.md) — explain the practical implications and link to the paper and code.
 
 ## Editorial direction
 
@@ -53,13 +53,18 @@ with the different-microbatch B128 comparison.
 
 ## Publication preparation
 
-Replace the relative paper links with its public URL before publishing.
+The conclusion links to the [published paper](https://arxiv.org/abs/2610.23409).
+Use [the four-bar Tarteel image](images/hero-concepts/08-tarteel-four-bar-tile.png)
+as the cover, with the alt text in Section 1. It appears inline there for draft
+preview; set it as the post’s feature image when publishing rather than displaying
+it twice.
 
-Section 2 links to [the alignment animation](animations/alignment.html), a
-self-contained HTML/SVG file with no external dependencies. Open it in a browser
-to preview; host it alongside the post and embed it with an iframe for publication.
-It loops every four seconds and supports light/dark themes, pause and reduced motion.
-Other illustrations are not selected yet.
+Section 2 links to [the alignment animation](animations/alignment.html) (four-second
+loop); Section 3 links to [the recomputation animation](animations/recomputation.html)
+(six-second loop). Both are self-contained HTML/SVG files with no external
+dependencies. Open them in a browser to preview; host them alongside the post and
+embed them with iframes for publication. Both support light/dark themes, pause and
+reduced motion. The recomputation block sizes are illustrative, not memory ratios.
 
 ## Style references
 

@@ -17,8 +17,10 @@ need to calculate the loss.
 To use that loss to train the model, we still need the values we discarded.
 Flash therefore revisits each tile during backpropagation, recreates the
 values needed for that calculation, and frees them before moving to the next
-tile. This is activation checkpointing: we repeat part of the computation so
+tile. This is called activation checkpointing: we repeat part of the computation so
 that the large intermediate tensors only need to exist for one tile at a time.
+
+[Animation: save the small outputs, recreate the large intermediates when needed.](animations/recomputation.html)
 
 That exchange gives us control over the memory requirement. Smaller tiles use
 less working space, while larger tiles give the GPU more work at once and reduce
