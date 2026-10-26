@@ -7,6 +7,7 @@ dependencies = []
 
 [dependency-groups]
 paper = ["matplotlib==3.10.8", "numpy==2.4.6", "PyMuPDF==1.26.4"]
+poster = [{include-group = "paper"}, "python-pptx==1.0.2", "cairosvg==2.8.2", "qrcode==8.2", "zxing-cpp==2.3.0"]
 data = ["numpy==2.4.6", "datasets==4.6.0", "huggingface-hub==1.24.0", "sentencepiece==0.2.1", "requests>=2.32,<3"]
 
 [tool.uv]
